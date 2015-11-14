@@ -36,9 +36,9 @@ h1
 #bottomColor
 {
 	border-radius: 25px;	
-	position: relative;
+	position: static;
     width: 980px;
-    height: 50px;
+    height: 400px;
     background: #FFFF55;
     margin: auto;
 }
