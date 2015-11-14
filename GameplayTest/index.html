@@ -1,17 +1,83 @@
+<!DOCTYPE html>
 <html>
+<link rel="stylesheet" type="text/css" href="main.css" media="screen" />
 <head>
-<title>
-QuoteLoadTest</title>
-<script src="gscript.js">
-</script>
-
+	<title>    Trump vs Colbert    </title>
+	<script src="gscript.js">
+	</script>
 </head>
-<body>
-<button onclick="DisplayQuote()">Click me for a quote</button>
 
-<p>this test should import some quote from the excel db of quotes</p>
+<body onload="dynamicResize()">
+	<center>
+		<h1><font color="Orange">TRUMP VS. COLBERT</font></h1>
+	</center>
+	<div class="trump-with-img">
+	    <div id="trumpstyle">
+			<img id="myImage" onclick="changeImage()" src="../Images/TrumpDefault.jpg" width="180" height="180" alt="Donald Trump"/>
+			<p><div id="trump">Donald Trump</div></p>
+		</div>
+	</div>
+	
+	<div class="colbert-with-img">
+		<div id="colbstyle">		
+			<img id="myImage2" onclick="changeImage2()" src="../Images/ColbertDefault.jpg" width="180" height="180" alt="Steven Colbert"/>
+		<p><div id="colbert">Steven Colbert</div></p>
+		</div>
+	</div>	
 
-<p id="quote"></p>
+	<h2 id="whoQ">WHO SAID THIS QUOTE?</h2>
+
+	<div id="quoteSectn" align="center">
+		<p id="quote"></p>
+	</div>
+	<br>
+	<div id="nextBtn" align="center">
+		<button type="button" onclick="DisplayQuote()">
+			<img id="btn" src="../Images/MetalButton.jpg" width="100" height="100"/>
+		</button>
+	</div>
+
+	<script>
+		function changeImage() 
+		{
+		    var image = document.getElementById('myImage');
+		    var image2 = document.getElementById('myImage2');
+		    if (image.src.match("TrumpGreen")) 
+		    {
+		        image.src = "../Images/Trumpdefault.jpg";
+		        image2.src = "../Images/Colbertdefault.jpg"
+		        document.getElementById('whoQ').innerHTML = 'WHO SAID THIS QUOTE?'
+		    } 
+		    else
+		    {
+		        image.src = "../Images/TrumpGreen.jpg";
+		        image2.src = "../Images/Colbertfade.jpg";
+		        document.getElementById('whoQ').innerHTML = 'GOOD JOB!'
+		    }
+		}
+		function changeImage2() 
+		{
+		    var image = document.getElementById('myImage');
+		    var image2 = document.getElementById('myImage2');
+		    if (image2.src.match("colbertgreen")) 
+		    {
+		        image.src = "../Images/Trumpdefault.jpg";
+		        image2.src = "../Images/Colbertdefault.jpg"
+		        document.getElementById('whoQ').innerHTML = 'WHO SAID THIS QUOTE?'
+		    } 
+		    else
+		    {
+		        image.src = "../Images/Trumpfade.jpg";
+		        image2.src = "../Images/colbertgreen.jpg";
+		        document.getElementById('whoQ').innerHTML = 'GOOD JOB!'
+		    }
+		}
+		function dynamicResize()
+		{
+			var width = $(window).width() - 25; 
+			$("trumpstyle").width(width);
+		}
+	</script>
 
 </body>
 </html>
