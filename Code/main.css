@@ -9,7 +9,7 @@ h1
 	font-size: 60px;
 	color : #0000FF;
 	text-align: center;
-	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-family: Impact, Charcoal, sans-serif;
 }
 img
 {
@@ -35,7 +35,7 @@ img
     width: 978px;
     height: 50px;
     border: 1px solid black;
-    background: #27AAE1;	
+    background: #00AEEF;	
     margin: auto;
     top: 400px;
 }
@@ -58,7 +58,7 @@ position: absolute;
  	padding-top: 0px;
     padding-right: 30px;
     padding-bottom: 50px;
-    padding-left: 80px;
+    padding-left: 30px;
     text-align:center;
 }
 .colbert-with-img
@@ -66,23 +66,25 @@ position: absolute;
  	display: inline;
  	float: right;
  	padding-top: 0px;
-    padding-right: 60px;
+    padding-right: 30px;
     padding-bottom: 50px;
     padding-left: 30px;
     text-align:center;
 }
 #quoteSectn
 {
-	color: white;
- 	margin-right: auto;
-    border: 2px solid white;
+	color: black;
+	background: #ffde6a; /*#8d0c11*/
+ 	margin: auto;
+    border: 2px solid black;
     padding: 5px;
 	text-align: center;
 	width: 30%;
 	margin: auto;
 	margin-top: 0px;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	font-size: 14px;
+	font-size: 16px;
+	box-shadow: 5px 5px 5px #000101;
 }
 #nextBtn
 {
@@ -91,7 +93,7 @@ position: absolute;
 }
 #trump, #colbert
 {
-	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-family: Verdana, Geneva, sans-serif;
 	font-size: 28px;
 	color: white;
 	display: inline-block;
