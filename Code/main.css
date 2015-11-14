@@ -1,6 +1,6 @@
 body
 {
-	background-color: black;
+	background-color: #2D2D2D;
 }
 h1
 {
@@ -32,7 +32,7 @@ h1
 {
 	color: white;
  	margin-right: auto;
-    border: 5px solid red;
+    border: 2px solid white;
 	text-align: center;
 	width: 30%;
 	margin: auto;
@@ -45,7 +45,7 @@ h1
 #trump, #colbert
 {
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	font-size: 35px;
+	font-size: 28px;
 	color: white;
 }
 h2
@@ -53,5 +53,5 @@ h2
 	color : green;
 	text-align: center;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	margin-top: 50px;
+	margin-top: 0px;
 }
