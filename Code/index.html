@@ -9,11 +9,10 @@
 	<center>
 		<h1><font color="Orange">TRUMP VS. COLBERT</font></h1>
 	</center>
-	<br>
 	<div class="trump-with-img">
 	    <div id="trumpstyle">
 			<img id="myImage" onclick="changeImage()" src="../Images/TrumpDefault.jpg" width="180" height="180" alt="Donald Trump"/>
-			<p><font size="20">Donald Trump</font></div></p>
+			<p><div id="trump"><font size="20">Donald Trump</font></div></p>
 		</div>
 	</div>
 	
@@ -76,7 +75,7 @@
 		function dynamicResize()
 		{
 			var width = $(window).width() - 25; 
-			$("#mydiv").width(width);
+			$("trumpstyle").width(width);
 		}
 	</script>
 

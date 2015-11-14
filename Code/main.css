@@ -1,7 +1,13 @@
+body
+{
+	background-color: black;
+}
 h1
 {
+	font-size: 60px;
 	color : #0000FF;
 	text-align: center;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .trump-with-img
 {
@@ -18,11 +24,16 @@ h1
 
 	border: 5px solid red;
 	text-align: center;
-	width: 10%;
+	width: 30%;
 	margin: auto;
+}
+#trump, #colbert
+{
+	color: white;
 }
 h2
 {
 	color : green;
 	text-align: center;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
