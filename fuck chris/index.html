@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>No repetition object oriented RNG implementation</h1>
+<p>Take 12</p>
+
+<p id="quote"></p>
+<button type="button" onclick="DisplayQuote()">Press to generate quote</button>;
+<script>
+function DisplayQuote()                 //function that displays new questions
+{   
+    var ToBeDisplayed;                  //Variable that stores a number that will determine which quote is displayed
+    var QuoteDB;                        //Variable that holds the correct database of questions
+
+    var ColbertQuotes = [               //Array Database of Colbert Quotes
+                            "I apologize for being perfect", 
+                            "Medicare is like a nice set of cufflinks. Nobody wears cufflinks anymore."
+                        ];
+
+
+    var TrumpQuotes = [                 //Array Database of Trump Quotes
+                            "We got Obama in there now and the Chinese testing him bing bing bing. You get a woman in there bing bom boom the whole world goes after her.", 
+                            "I think apologizing's a great thing, but you have to be wrong… I will absolutely apologize, sometimes in the hopefully distant future, if I'm ever wrong.",
+                            "It's freezing and snowing in New York. We need global warming!", 
+                            "So many people have told me that I should host Meet the Press and replace the moron who is on now. Just too busy, especially next 10 years!"
+                      ];
+
+ //   if(Math.random()<.5)                //Randomly determines if question should be a Colbert or Trump quote
+   //     {
+     //       QuoteDB = ColbertQuotes;
+       //     RealAnswer = "Colbert";
+var ColbertGen = new randomGenerator(0, ColbertQuotes.length);
+for (var i = 0; i < 10; i++) {
+    alert(ColbertGen.get());
+
+        }
+/*
+    else
+        {
+            QuoteDB = TrumpQuotes;
+            RealAnswer = "Trump";
+var TrumpGen = new randomGenerator(0, TrumpQuotes.length);
+for (var i = 0; i < 10; i++) {
+    alert(TrumpGen.get());
+        }
+
+    ToBeDisplayed = parseInt((Math.random() * QuoteDB.length), 10);
+}
+    document.getElementById("quote").innerHTML = QuoteDB[ToBeDisplayed];    //Displays a quote*/
+}
+
+function randomGenerator(low, high) {
+    if (arguments.length < 2) {
+        high = low;
+        low = 0;
+    }
+    this.low = low;
+    this.high = high;
+    this.reset();
+}
+
+randomGenerator.prototype = {
+    reset: function() {
+        this.remaining = [];
+        for (var i = this.low; i <= this.high; i++) {
+            this.remaining.push(i);
+        }
+    },
+    get: function() {
+        if (!this.remaining.length) {
+            this.reset();
+        }
+        var index = Math.floor(Math.random() * this.remaining.length);
+        var val = this.remaining[index];
+        this.remaining.splice(index, 1);
+        return val;        
+    }
+}
+
+
+</script>
+
+</body>
+</html>
+
+
