@@ -1,8 +1,7 @@
-
-
 function DisplayQuote() {
 
 var ToBeDisplayed;
+var QuoteIncrementer;
 
 var ColbertQuotes = [	
 						"I apologize for being perfect", 
@@ -19,14 +18,19 @@ var TrumpQuotes = [
 
 if(Math.random()<.5)
 	{
-		ToBeDisplayed = "Colbert Quote";
+		ToBeDisplayed = ColbertQuotes.length;
+		//document.getElementById("demo").innerHTML = "getQuote(ColbertQuotes)";
 	}
 
 else
 	{
-		ToBeDisplayed = "Trump Quote";
+		ToBeDisplayed = TrumpQuotes.length;
+		//document.getElementById("demo").innerHTML = "getQuote(TrumpQuotes)";
+
 	}
 document.getElementById("demo").innerHTML = ToBeDisplayed;
+document.getElementById("quote").innerHTML = ToBeDisplayed;
 
 
 }
+
