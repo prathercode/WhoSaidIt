@@ -1,8 +1,39 @@
-h1{
-	color : orange;
-	text-align: center;
+body
+{
+	background-color: black;
 }
-h2{
+h1
+{
+	font-size: 60px;
+	color : #0000FF;
+	text-align: center;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.trump-with-img
+{
+	display: inline;
+	float: left;
+}
+.colbert-with-img
+{
+ 	display: inline;
+ 	float: right;
+}
+#quoteSectn
+{
+
+	border: 5px solid red;
+	text-align: center;
+	width: 30%;
+	margin: auto;
+}
+#trump, #colbert
+{
+	color: white;
+}
+h2
+{
 	color : green;
 	text-align: center;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
