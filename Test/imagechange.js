@@ -1,4 +1,3 @@
-imagechange.js
 function changeImage() {
     var image = document.getElementById('myImage');
     if (image.src.match("TrumpGreen")) {
