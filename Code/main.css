@@ -1,6 +1,6 @@
 body
 {
-	background-color: #2D2D2D;
+	background-color: #2D2D2D; /*A7A9AC*/
 	max-width: 100%;
 	max-height: 100%;
 }
@@ -18,44 +18,34 @@ h1
 }
 #topColor
 {
-	border-radius: 25px;
+margin: auto;
+border-radius: 15px;
     width: 980px;
     height: 400px;
-    background: #FF5555;
-    margin: auto;
+    background: #ED1C24;
 }
 #divider
-{
-	border-radius: 25px;	
-	position: static;
+{	
+position: absolute;
     width: 980px;
     height: 50px;
-    background: #55FFFF;
+    background: #27AAE1;	
     margin: auto;
-    top: 100%;
-    left: 0%;
-    right: 0%;
-    bottom: 0%;
+    top: 420px;
 }
 #bottomColor
 {
-	border-radius: 25px;	
-	position: static;
+border-radius: 0px 0px 15px 15px;	
+position: absolute;
     width: 980px;
     height: 400px;
-    background: #FF5555;
+    background: #ED1C24;
     margin: auto;
+    top: 440px;
 }
 .trump-with-img
 {
-<<<<<<< HEAD
-	display: inline-block;
-}
-.colbert-with-img
-{
  	display: inline-block;
-=======
-	display: inline;
 	float: left;
  	margin-left: auto;
  	padding-top: 0px;
@@ -69,11 +59,10 @@ h1
  	display: inline;
  	float: right;
  	padding-top: 0px;
-    padding-right: 80px;
+    padding-right: 60px;
     padding-bottom: 50px;
     padding-left: 30px;
     text-align:center;
->>>>>>> refs/remotes/origin/master
 }
 #quoteSectn
 {
@@ -107,7 +96,7 @@ h1
 }
 h2
 {
-	color : green;
+	color : 000000;
 	text-align: center;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	margin-top: 0px;
