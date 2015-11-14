@@ -32,6 +32,10 @@ h1
     height: 50px;
     background: #55FFFF;
     margin: auto;
+    top: 100%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
 }
 #bottomColor
 {
