@@ -26,16 +26,16 @@ function DisplayQuote()                 //function that displays new questions
                             "So many people have told me that I should host Meet the Press and replace the moron who is on now. Just too busy, especially next 10 years!"
                       ];
 
-    if(Math.random()<.5)                //Randomly determines if question should be a Colbert or Trump quote
-        {
-            QuoteDB = ColbertQuotes;
-            RealAnswer = "Colbert";
+ //   if(Math.random()<.5)                //Randomly determines if question should be a Colbert or Trump quote
+   //     {
+     //       QuoteDB = ColbertQuotes;
+       //     RealAnswer = "Colbert";
 var ColbertGen = new randomGenerator(0, ColbertQuotes.length);
 for (var i = 0; i < 10; i++) {
     alert(ColbertGen.get());
 
         }
-
+/*
     else
         {
             QuoteDB = TrumpQuotes;
@@ -47,7 +47,7 @@ for (var i = 0; i < 10; i++) {
 
     ToBeDisplayed = parseInt((Math.random() * QuoteDB.length), 10);
 }
-    document.getElementById("quote").innerHTML = QuoteDB[ToBeDisplayed];    //Displays a quote
+    document.getElementById("quote").innerHTML = QuoteDB[ToBeDisplayed];    //Displays a quote*/
 }
 
 function randomGenerator(low, high) {
