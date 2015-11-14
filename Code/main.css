@@ -13,19 +13,34 @@ h1
 {
 	display: inline;
 	float: left;
+ 	margin-left: auto;
+ 	padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
 }
 .colbert-with-img
 {
  	display: inline;
  	float: right;
+ 	padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
 }
 #quoteSectn
 {
 	color: white;
-	border: 5px solid red;
+ 	margin-right: auto;
+    border: 5px solid red;
 	text-align: center;
 	width: 30%;
 	margin: auto;
+	margin-top: 0px;
+}
+#nextBtn
+{
+
 }
 #trump, #colbert
 {
@@ -38,4 +53,5 @@ h2
 	color : green;
 	text-align: center;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	margin-top: 50px;
 }
