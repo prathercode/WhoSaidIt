@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html>
-<body>
+<link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+	<body>
 
-<h1>Make Trump Green with Envy!</h1>
+	<h1>Make Trump Green with Envy!</h1>
+<div>
+	<img id="myImage" onclick="changeImage()" src="TrumpDefault.jpg" width="180" height="180" style="vertical-align:middle">
+	<img id="myImage2" onclick="changeImage2()" src="ColbertDefault.jpg" width="180" height="180"style="vertical-align:middle">
+</div>
 
-<img id="myImage" onclick="changeImage()" src="TrumpDefault.jpg" width="100" height="180">
+		<h2>WHO SAID THIS QUOTE?</h2>
 
-<p>Click the Picture of Donald to turn him green.</p>
-
-<script>
-function changeImage() {
-    var image = document.getElementById('myImage');
-    if (image.src.match("TrumpGreen")) {
-        image.src = "Trumpdefault.jpg";
-    } else {
-        image.src = "TrumpGreen.jpg";
-    }
-}
-</script>
-
-</body>
+		<script>
+		function changeImage() 
+		{
+		    var image = document.getElementById('myImage');
+		    var image2 = document.getElementById('myImage2');
+		    if (image.src.match("TrumpGreen")) 
+		    {
+		        image.src = "Trumpdefault.jpg";
+		        image2.src = "Colbertdefault.jpg"
+		    } 
+		    else
+		    {
+		        image.src = "TrumpGreen.jpg";
+		        image2.src = "Colbertfade.jpg";
+		    }
+		}
+		function changeImage2() 
+		{
+		    var image = document.getElementById('myImage');
+		    var image2 = document.getElementById('myImage2');
+		    if (image2.src.match("colbertgreen")) 
+		    {
+		        image.src = "Trumpdefault.jpg";
+		        image2.src = "Colbertdefault.jpg"
+		    } 
+		    else
+		    {
+		        image.src = "Trumpfade.jpg";
+		        image2.src = "colbertgreen.jpg";
+		    }
+		}
+		</script>
+		
+		<!--<script src="christest.js"></script>-->
+	</body>
 </html>
