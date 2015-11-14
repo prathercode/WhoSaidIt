@@ -3,6 +3,8 @@
 <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
 <head>
 	<title>    Trump vs Colbert    </title>
+	<script src="../DBTest/dbscript.js">
+	</script>
 </head>
 
 <body onload="dynamicResize()">
@@ -26,14 +28,12 @@
 	<h2 id="whoQ">WHO SAID THIS QUOTE?</h2>
 
 	<div id="quoteSectn" align="center">
-		<p>
-			This is where we'll put a quote okay
-		</p>
+		<p id="quote"></p>
 	</div>
 	<br>
 	<div id="nextBtn" align="center">
-		<button type="button">
-			NEXT
+		<button type="button" onclick="DisplayQuote()">
+			<img id="btn" src="../Images/MetalButton.jpg" width="100" height="100"/>
 		</button>
 	</div>
 
