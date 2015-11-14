@@ -18,20 +18,22 @@ h1
 }
 #topColor
 {
-margin: auto;
-border-radius: 15px;
+	margin-top: -40px;
+	margin-left: 25%;
     width: 980px;
     height: 400px;
     background: #ED1C24;
+    box-shadow: 0px -7.5px 10px 7.5px #000101;
 }
 #divider
 {	
-position: absolute;
-    width: 980px;
+	position: absolute;
+    width: 978px;
     height: 50px;
+    border: 1px solid black;
     background: #27AAE1;	
     margin: auto;
-    top: 420px;
+    top: 400px;
 }
 #bottomColor
 {
@@ -41,7 +43,8 @@ position: absolute;
     height: 400px;
     background: #ED1C24;
     margin: auto;
-    top: 440px;
+    top: 415px;
+    box-shadow: 0px 7.5px 10px 7.5px #000101;
 }
 .trump-with-img
 {
@@ -69,6 +72,7 @@ position: absolute;
 	color: white;
  	margin-right: auto;
     border: 2px solid white;
+    padding: 5px;
 	text-align: center;
 	width: 30%;
 	margin: auto;
