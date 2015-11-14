@@ -10,12 +10,20 @@ h1
 	display: inline;
 	float: left;
  	margin-left: auto;
+ 	padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
 }
 .colbert-with-img
 {
  	display: inline;
  	float: right;
  	margin-right: auto;
+ 	padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
 }
 #quoteSectn
 {
