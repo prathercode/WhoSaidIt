@@ -81,16 +81,16 @@ function CorrectAnswer()	//Color functionality if player is correct
 		{		
 				var image = document.getElementById('myImage');
 		    	var image2 = document.getElementById('myImage2');
-				image.src = "../Images/Trumpfade.jpg";
-		        image2.src = "../Images/colbertgreen.jpg";
+				image.src = "../Images/SelectedColbertCorrectTrump.jpg";
+		        image2.src = "../Images/SelectedColbertCorrect.png";
 		}
 
 	else
 		{
 				var image = document.getElementById('myImage');
 		    	var image2 = document.getElementById('myImage2');
-				image.src = "../Images/TrumpGreen.jpg";
-		        image2.src = "../Images/Colbertfade.jpg";
+				image.src = "../Images/SelectedTrumpCorrect.png";
+		        image2.src = "../Images/SelectedTrumpCorrectColbert.jpg";
 		}
 
 	document.getElementById('whoQ').innerHTML = HappyMessage;
@@ -100,14 +100,14 @@ function WrongAnswer()		// Color functionality if player is wrong
 {
 	if (SelectedAnswer === "Colbert")
 		{
-			image.src = "../Images/NotSelectedTrumpWrong.jpg";
-		    image2.src = "../Images/SelectedColbertWrong.jpg";
+			image.src = "../Images/TrumpDefault.png";
+		    image2.src = "../Images/SelectedColbertIncorrect.png";
 		}	
 
 	else
 		{
-			image.src = "../Images/SelectedTrumpWrong.jpg";
-		    image2.src = "../Images/NotSelectedColbertWrong.jpg";
+			image.src = "../Images/SelectedTrumpIncorrect.png";
+		    image2.src = "../Images/ColbertDefault.png";
 		}	
 	document.getElementById('whoQ').innerHTML = SadMessage;
 }
