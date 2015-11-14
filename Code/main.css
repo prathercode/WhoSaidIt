@@ -1,6 +1,6 @@
 body
 {
-	background-color: black;
+	background-color: #2D2D2D;
 }
 h1
 {
@@ -18,40 +18,52 @@ h1
     padding-right: 30px;
     padding-bottom: 50px;
     padding-left: 80px;
+    text-align:center;
 }
 .colbert-with-img
 {
  	display: inline;
  	float: right;
  	padding-top: 0px;
-    padding-right: 30px;
+    padding-right: 80px;
     padding-bottom: 50px;
-    padding-left: 80px;
+    padding-left: 30px;
+    text-align:center;
 }
 #quoteSectn
 {
 	color: white;
  	margin-right: auto;
-    border: 5px solid red;
+    border: 2px solid white;
 	text-align: center;
 	width: 30%;
 	margin: auto;
 	margin-top: 0px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 14px;
 }
 #nextBtn
 {
-
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 14px;
 }
 #trump, #colbert
 {
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	font-size: 35px;
+	font-size: 28px;
 	color: white;
+	display: inline-block;
+	vertical-align: middle;
+}
+#trumpstyle, #colbstyle
+{
+	display: inline-block;
+	vertical-align: middle;
 }
 h2
 {
 	color : green;
 	text-align: center;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	margin-top: 50px;
+	margin-top: 0px;
 }
