@@ -2,7 +2,6 @@
 
 function DisplayQuote() {
 
-var RandomBoolean = Math.random()<.5;
 var ToBeDisplayed;
 
 var ColbertQuotes = [	
@@ -17,9 +16,8 @@ var TrumpQuotes = [
 						"It's freezing and snowing in New York. We need global warming!", 
 						"So many people have told me that I should host Meet the Press and replace the moron who is on now. Just too busy, especially next 10 years!"
 				  ];
-document.getElementById("rand1").innerHTML = RandomBoolean;	
-//document.getElementById("demo").innerHTML = ColbertQuotes[0];	
-if(RandomBoolean = true)
+
+if(Math.random()<.5)
 	{
 		ToBeDisplayed = "Colbert Quote";
 	}
