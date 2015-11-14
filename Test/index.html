@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
-	<body>
+	<body onload="dynamicResize()">
+	<h1>TRUMP VS. COLBERT</h1>
 
-	<h1>Make Trump Green with Envy!</h1>
-<div>
-	<img id="myImage" onclick="changeImage()" src="TrumpDefault.jpg" width="180" height="180" style="vertical-align:middle">
-	<img id="myImage2" onclick="changeImage2()" src="ColbertDefault.jpg" width="180" height="180"style="vertical-align:middle">
-</div>
+	<div id="trumpstyle">
+		<img id="myImage" onclick="changeImage()" src="TrumpDefault.jpg" width="180" height="180">
+	</div>
 
-		<h2>WHO SAID THIS QUOTE?</h2>
+	<div id="colbstyle">		
+		<img id="myImage2" onclick="changeImage2()" src="ColbertDefault.jpg" width="180" height="180">
+	</div>
 
-		<script>
+	<h2 id="whoQ">WHO SAID THIS QUOTE?</h2>
+
+	<div id="nextBtn" align="center">
+	<button type="button">NEXT</button>
+	</div>
+
+	<script>
 		function changeImage() 
 		{
 		    var image = document.getElementById('myImage');
@@ -20,11 +27,13 @@
 		    {
 		        image.src = "Trumpdefault.jpg";
 		        image2.src = "Colbertdefault.jpg"
+		        document.getElementById('whoQ').innerHTML = 'WHO SAID THIS QUOTE?'
 		    } 
 		    else
 		    {
 		        image.src = "TrumpGreen.jpg";
 		        image2.src = "Colbertfade.jpg";
+		        document.getElementById('whoQ').innerHTML = 'GOOD JOB!'
 		    }
 		}
 		function changeImage2() 
@@ -35,15 +44,21 @@
 		    {
 		        image.src = "Trumpdefault.jpg";
 		        image2.src = "Colbertdefault.jpg"
+		        document.getElementById('whoQ').innerHTML = 'WHO SAID THIS QUOTE?'
 		    } 
 		    else
 		    {
 		        image.src = "Trumpfade.jpg";
 		        image2.src = "colbertgreen.jpg";
+		        document.getElementById('whoQ').innerHTML = 'GOOD JOB!'
 		    }
 		}
-		</script>
-		
-		<!--<script src="christest.js"></script>-->
+		function dynamicResize()
+		{
+			var width = $(window).width() - 25; 
+			$("#mydiv").width(width);
+		}
+	</script>
+
 	</body>
 </html>
