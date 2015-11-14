@@ -2,23 +2,27 @@
 <html>
 <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
 <head>
-	<title>    Colbert vs Trump    </title>
+	<title>    Trump vs Colbert    </title>
 </head>
 
-<body bgcolor="Brown" onload="dynamicResize()">
+<body onload="dynamicResize()">
 	<center>
 		<h1><font color="Orange">TRUMP VS. COLBERT</font></h1>
 	</center>
 	<br>
-	<div id="trump"><font size="20">Donald Trump</font></div>
-	<div id="colbert"><font size="20">Steven Colbert</font></div>
-	<div id="trumpstyle">
-		<img id="myImage" onclick="changeImage()" src="../Images/TrumpDefault.jpg" width="180" height="180">
+	<div class="trump-with-img">
+	    <div id="trumpstyle">
+			<img id="myImage" onclick="changeImage()" src="../Images/TrumpDefault.jpg" width="180" height="180" alt="Donald Trump"/>
+			<p><font size="20">Donald Trump</font></div></p>
+		</div>
 	</div>
-
-	<div id="colbstyle">		
-		<img id="myImage2" onclick="changeImage2()" src="../Images/ColbertDefault.jpg" width="180" height="180">
-	</div>
+	
+	<div class="colbert-with-img">
+		<div id="colbstyle">		
+			<img id="myImage2" onclick="changeImage2()" src="../Images/ColbertDefault.jpg" width="180" height="180" alt="Steven Colbert"/>
+		<p><div id="colbert"><font size="20">Steven Colbert</font></div></p>
+		</div>
+	</div>	
 
 	<h2 id="whoQ">WHO SAID THIS QUOTE?</h2>
 
