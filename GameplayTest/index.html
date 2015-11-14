@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+<head>
+	<title>    Trump vs Colbert    </title>
+	<script src="gscript.js">
+	</script>
+
+</head>
+
+<body onload="SetQPfalse()">
+	<center>
+		<h1><font color="Orange">TRUMP VS. COLBERT</font></h1>
+	</center>
+	<div class="trump-with-img">
+	    <div id="trumpstyle">
+			<img id="myImage" onclick="SelectTrump()" src="../Images/TrumpDefault.png" width="180" height="180" alt="Donald Trump"/>
+			<p><div id="trump">Donald Trump</div></p>
+
+		</div>
+	</div>
+	
+	<div class="colbert-with-img">
+		<div id="colbstyle">		
+			<img id="myImage2" onclick="SelectColbert()" src="../Images/ColbertDefault.png" width="180" height="180" alt="Steven Colbert"/>
+		<p><div id="colbert">Steven Colbert</div></p>
+		</div>
+	</div>	
+
+	<h2 id="whoQ">WHO SAID THIS QUOTE?</h2>
+
+	<div id="quoteSectn" align="center">
+		<p id="quote"></p>
+	</div>
+	<br>
+	<div id="nextBtn" align="center">
+		<button type="button" onclick="DisplayQuote()">
+			<img id="btn" src="../Images/MetalButton.jpg" width="100" height="100"/>
+		</button>
+	</div>
+
+
+</body>
+</html>
