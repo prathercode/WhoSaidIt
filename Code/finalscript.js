@@ -8,8 +8,9 @@ window.SadMessage	= "You're Fired!"	//global variable containing response if pla
 
 
 function DisplayQuote() 				//function that displays new questions
-{			
-	QuestionPlaying = true;				//Starts a question cycle
+{	
+	reset();							//resets for the initialization of a question cycle
+	QuestionPlaying = true;				//Demarcates the initialization of a question cycle
 	var ToBeDisplayed;					//Variable that stores a number that will determine which quote is displayed
 	var QuoteDB;						//Variable that holds the correct database of questions
 
@@ -117,7 +118,7 @@ function reset()
 {
 	var image = document.getElementById('myImage');
 	var image2 = document.getElementById('myImage2');
-		image.src = "../Images/Trumpdefault.jpg";
-		image2.src = "../Images/Colbertdefault.jpg";
+		image.src = "../Images/TrumpDefault.png";
+		image2.src = "../Images/ColbertDefault.png";
 	document.getElementById('whoQ').innerHTML = 'WHO SAID THIS QUOTE?';
 }
