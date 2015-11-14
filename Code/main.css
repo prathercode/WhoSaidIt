@@ -21,7 +21,7 @@ h1
 }
 #quoteSectn
 {
-
+	color: white;
 	border: 5px solid red;
 	text-align: center;
 	width: 30%;
@@ -29,6 +29,8 @@ h1
 }
 #trump, #colbert
 {
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 35px;
 	color: white;
 }
 h2
