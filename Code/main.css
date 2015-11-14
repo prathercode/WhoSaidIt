@@ -11,13 +11,11 @@ h1
 }
 .trump-with-img
 {
-	display: inline;
-	float: left;
+	display: inline-block;
 }
 .colbert-with-img
 {
- 	display: inline;
- 	float: right;
+ 	display: inline-block;
 }
 #quoteSectn
 {
