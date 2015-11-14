@@ -3,40 +3,51 @@
 <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
 <head>
 	<title>    Trump vs Colbert    </title>
+	<script src="dbscript.js">
+	</script>
+
 </head>
 
-<body onload="dynamicResize()">
+<body>
+<div class="backgroundShapes">
+	<div id="topColor">
+	<div id="divider">
+	<div id="bottomColor">
+
 	<center>
 		<h1><font color="Orange">TRUMP VS. COLBERT</font></h1>
 	</center>
-	<div class="trump-with-img">
-	    <div id="trumpstyle">
-			<img id="myImage" onclick="changeImage()" src="../Images/TrumpDefault.jpg" width="180" height="180" alt="Donald Trump"/>
-			<p><div id="trump"><font size="20">Donald Trump</font></div></p>
+	<div class="content">
+		<div class="trump-with-img">
+		    <div id="trumpstyle">
+				<img id="myImage" onclick="changeImage()" src="../Images/TrumpDefault.jpg" width="180" height="180" alt="Donald Trump"/>
+				<p><div id="trump">Donald Trump</div></p>
+			</div>
 		</div>
-	</div>
-	
-	<div class="colbert-with-img">
-		<div id="colbstyle">		
-			<img id="myImage2" onclick="changeImage2()" src="../Images/ColbertDefault.jpg" width="180" height="180" alt="Steven Colbert"/>
-		<p><div id="colbert"><font size="20">Steven Colbert</font></div></p>
+		
+		<div class="colbert-with-img">
+			<div id="colbstyle">		
+				<img id="myImage2" onclick="changeImage2()" src="../Images/ColbertDefault.jpg" width="180" height="180" alt="Steven Colbert"/>
+			<p><div id="colbert">Steven Colbert</div></p>
+			</div>
+		</div>	
+
+		<h2 id="whoQ">WHO SAID THIS QUOTE?</h2>
+
+		<div id="quoteSectn" align="center">
+			<p id="quote"></p>
 		</div>
-	</div>	
-
-	<h2 id="whoQ">WHO SAID THIS QUOTE?</h2>
-
-	<div id="quoteSectn" align="center">
-		<p>
-			This is where we'll put a quote okay
-		</p>
-	</div>
-	<br>
-	<div id="nextBtn" align="center">
-		<button type="button">
+		<br>
+		<div id="nextBtn" align="center">
+			<button type="button" onclick="DisplayQuote()">
 			NEXT
-		</button>
+			</button>
+		</div>
 	</div>
-
+	</div>
+	</div>
+	</div>
+</div>
 	<script>
 		function changeImage() 
 		{
