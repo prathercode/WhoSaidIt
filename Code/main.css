@@ -48,6 +48,13 @@ h1
 }
 .trump-with-img
 {
+<<<<<<< HEAD
+	display: inline-block;
+}
+.colbert-with-img
+{
+ 	display: inline-block;
+=======
 	display: inline;
 	float: left;
  	margin-left: auto;
@@ -66,6 +73,7 @@ h1
     padding-bottom: 50px;
     padding-left: 30px;
     text-align:center;
+>>>>>>> refs/remotes/origin/master
 }
 #quoteSectn
 {
