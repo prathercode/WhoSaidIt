@@ -7,6 +7,7 @@ window.SadMessage	= "You're Fired!"	//global variable containing response if pla
 
 
 
+
 function DisplayQuote() 				//function that displays new questions
 {	
 	reset();							//resets for the initialization of a question cycle
@@ -94,7 +95,6 @@ function CorrectAnswer()	//Color functionality if player is correct
 				image.src = "../Images/SelectedTrumpCorrect.png";
 		        image2.src = "../Images/SelectedTrumpCorrectColbert.jpg";
 		}
-
 	document.getElementById('whoQ').innerHTML = HappyMessage;
 }
 
@@ -102,12 +102,16 @@ function WrongAnswer()		// Color functionality if player is wrong
 {
 	if (SelectedAnswer === "Colbert")
 		{
+			var image = document.getElementById('myImage');
+		    var image2 = document.getElementById('myImage2');
 			image.src = "../Images/TrumpDefault.png";
 		    image2.src = "../Images/SelectedColbertIncorrect.png";
 		}	
 
 	else
 		{
+			var image = document.getElementById('myImage');
+		    var image2 = document.getElementById('myImage2');
 			image.src = "../Images/SelectedTrumpIncorrect.png";
 		    image2.src = "../Images/ColbertDefault.png";
 		}	
@@ -122,3 +126,5 @@ function reset()
 		image2.src = "../Images/ColbertDefault.png";
 	document.getElementById('whoQ').innerHTML = 'WHO SAID THIS QUOTE?';
 }
+
+
