@@ -31,7 +31,6 @@ function DisplayQuote() 				//function that displays new questions. Called by cl
 					 		"Medicare is like a nice set of cufflinks. Nobody wears cufflinks anymore.",
 							"I don't accept the status quo. I do accept Visa, MasterCard, or American Express.",
 							"It used to be, everyone was entitled to their own opinion, but not their own facts. But that's not the case anymore. Facts matter not at all. Perception is everything.",
-							"We have this idea in our minds that there's this separation of church and state in America, which I think is a good thing. And we extend that to our politics - not just church and state, but it's also there's a separation of religion and politics. But of course there isn't.",
 							"We got Obama in there now and the Chinese testing him bing bing bing. You get a woman in there bing bom boom the whole world goes after her.", 
 							"If our founding fathers wanted us to care about the rest of the world, they wouldn't have declared our independence from it.",
 							"The pen is mightier than the sword if you shoot that pen out of a gun.",
@@ -66,6 +65,23 @@ function DisplayQuote() 				//function that displays new questions. Called by cl
 
 	ToBeDisplayed = parseInt((Math.random() * QuoteDB.length), 10);
 	document.getElementById("quote").innerHTML = QuoteDB[ToBeDisplayed];	//Displays a quote
+	document.getElementsByClassName('button-0')[0].innerHTML = "PASS!";
+}
+
+
+function ButtonMethod()
+{
+	if (document.getElementsByClassName('button-0')[0].innerHTML == ("PASS!")) 
+		{
+			if(Streak>TopStreak)
+				{
+					TopStreak = Streak;
+				}
+			Streak = 0;
+			document.getElementById("cSVal").innerHTML = Streak;
+			document.getElementById("bSVal").innerHTML = TopStreak;
+		}
+	DisplayQuote();
 }
 
 
@@ -131,6 +147,7 @@ function CorrectAnswer()	//Color functionality if player is correct
 	document.getElementById("wGVal").innerHTML = WrongGuessCount;
 	document.getElementById("cSVal").innerHTML = Streak;
 	document.getElementById("bSVal").innerHTML = TopStreak;
+	document.getElementsByClassName('button-0')[0].innerHTML = "NEXT!";
 }
 
 function WrongAnswer()		// Color functionality if player is wrong
@@ -162,6 +179,7 @@ function WrongAnswer()		// Color functionality if player is wrong
 	document.getElementById("wGVal").innerHTML = WrongGuessCount;
 	document.getElementById("cSVal").innerHTML = Streak;
 	document.getElementById("bSVal").innerHTML = TopStreak;
+	document.getElementsByClassName('button-0')[0].innerHTML = "NEXT!";
 }
 
 function reset()
@@ -170,7 +188,10 @@ function reset()
 	var image2 = document.getElementById('myImage2');
 		image.src = "../Images/TrumpDefault.png";
 		image2.src = "../Images/ColbertDefault.png";
-	document.getElementById('whoQ').innerHTML = 'Who Said It?';
+		document.getElementById('whoQ').innerHTML = 'Who Said It?';
+	var x = document.getElementById('whoQ');
+   		x.style.fontSize = "24px";           
+    	x.style.color = "Black"; 
 }
 
 
@@ -205,8 +226,8 @@ function TimeRunsOut()
 	WrongAnswer();
 	document.getElementById('whoQ').innerHTML = "Time's Up!";
 	var x = document.getElementById('whoQ');
-    x.style.fontSize = "25px";           
-    x.style.color = "black"; 
+    x.style.fontSize = "35px";           
+    x.style.color = "Red"; 
 }
 
 function endTimer()
