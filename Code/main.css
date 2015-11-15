@@ -14,6 +14,15 @@ h1
 #whoQ
 {
 	color: black;
+	background-color: #ffde6a;
+    border: 2px solid black;
+    padding: 5px;
+    width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 10px;
+	box-shadow: 5px 5px 5px #000101;
 }
 #myImage, #myImage2
 {
@@ -50,8 +59,8 @@ h1
 }
 #bottomColor
 {
-border-radius: 0px 0px 15px 15px;	
-position: absolute;
+	border-radius: 0px 0px 15px 15px;	
+	position: absolute;
     width: 980px;
     height: 400px;
     background: #ED1C24;
@@ -110,6 +119,7 @@ position: absolute;
 	-webkit-transition: all 0.1s;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 40px;
+	box-shadow: 5px 5px 5px #000101;
 }
 .button-0:hover, 
 .button-0:focus {
@@ -147,13 +157,41 @@ h2
 .values
 {
 	text-align: center;
-	margin-top: 25px;
+	margin-top: 35px;
+}
+#bottomValues
+{
+	color: black;
+	background-color: #ffde6a;
+    border: 2px solid black;
+    width: 20%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	box-shadow: 5px 5px 5px #000101;
+	height: 130px;
+}
+#timerValues
+{
+	color: white;
+	background-color: #2D2D2D;
+    border: 2px solid black;
+    width: 17.5%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 20px;
+	box-shadow: 5px 5px 5px #000101;
+	vertical-align: middle;
+	height: 42px;
 }
 #cStreak, #bStreak, #rGuesses, #wGuesses
 {
-	font-size: 16px;
+	font-size: 20px;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-weight: bold;
+	vertical-align: middle;
 }
 #crossmark, #wGVal, #tab, #checkmark, #rGVal, #bStreak, #bSVal, #cStreak, #cSVal
 {
@@ -164,15 +202,17 @@ h2
 }
 #cSVal, #bSVal
 {
-	font-size: 16px;
+	font-size: 20px;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-weight: bold;
+	vertical-align: middle;
 }
 #rGVal, #wGVal
 {
-	font-size: 26px;
+	font-size: 20px;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-weight: bold;
+	vertical-align: middle;
 }
 #timer, #countdown
 {
@@ -180,7 +220,7 @@ h2
 	vertical-align: middle;
 	text-align: center;
 	margin: auto;
-	font-size: 24px;
+	font-size: 28px;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-weight: bold;
 }
