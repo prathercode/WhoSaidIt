@@ -66,7 +66,9 @@ function DisplayQuote() 				//function that displays new questions. Called by cl
 		}
 
 	ToBeDisplayed = parseInt((Math.random() * QuoteDB.length), 10);
-	if (RealAnswer == "Colbert") 
+	document.getElementById("quote").innerHTML = QuoteDB[ToBeDisplayed];	//Displays a quote
+
+	if (RealAnswer == "Colbert")  //prevents back to back duplicates
 		{
 			if (ToBeDisplayed==LastColbert)
 				{
@@ -97,12 +99,11 @@ function DisplayQuote() 				//function that displays new questions. Called by cl
 				}
 				LastTrump = ToBeDisplayed;	
 		}	
-	document.getElementById("quote").innerHTML = QuoteDB[ToBeDisplayed];	//Displays a quote
 	document.getElementsByClassName('button-0')[0].innerHTML = "PASS!";
 }
 
 
-function ButtonMethod()
+function ButtonMethod() //manages the button that is start, pass, and next
 {
 	if (document.getElementsByClassName('button-0')[0].innerHTML == ("PASS!")) 
 		{
@@ -137,7 +138,7 @@ function SelectColbert()	//Initializes answering process if Colbert is the selec
 	}
 }
 
-function answerQuote()		//Checks if the player is correct or incorrect
+function answerQuote()		//Checks if the player is correct or incorrect, and makes a decision
 {
 	if (SelectedAnswer === RealAnswer)
 		{
@@ -150,7 +151,7 @@ function answerQuote()		//Checks if the player is correct or incorrect
 		}
 }
 
-function CorrectAnswer()	//Color functionality if player is correct
+function CorrectAnswer()	// if player choice is correct
 {
 	if 	(SelectedAnswer === "Colbert") 
 		{		
@@ -158,6 +159,7 @@ function CorrectAnswer()	//Color functionality if player is correct
 		    	var image2 = document.getElementById('myImage2');
 				image.src = "../Images/SelectedColbertCorrectTrump.jpg";
 		        image2.src = "../Images/SelectedColbertCorrect.png";
+		        playCCFile();
 		}
 
 	else
@@ -166,6 +168,7 @@ function CorrectAnswer()	//Color functionality if player is correct
 		    	var image2 = document.getElementById('myImage2');
 				image.src = "../Images/SelectedTrumpCorrect.png";
 		        image2.src = "../Images/SelectedTrumpCorrectColbert.jpg";
+		        playTCFile();
 		}
 
 	QuestionPlaying = false;
@@ -183,7 +186,7 @@ function CorrectAnswer()	//Color functionality if player is correct
 	document.getElementsByClassName('button-0')[0].innerHTML = "NEXT!";
 }
 
-function WrongAnswer()		// Color functionality if player is wrong
+function WrongAnswer()		// if player choice is wrong
 {
 	if (SelectedAnswer === "Colbert")
 		{
@@ -191,7 +194,7 @@ function WrongAnswer()		// Color functionality if player is wrong
 		    var image2 = document.getElementById('myImage2');
 			image.src = "../Images/TrumpDefault.png";
 		    image2.src = "../Images/SelectedColbertIncorrect.png";
-
+		    playCXFile();
 		}	
 
 	else
@@ -200,6 +203,7 @@ function WrongAnswer()		// Color functionality if player is wrong
 		    var image2 = document.getElementById('myImage2');
 			image.src = "../Images/SelectedTrumpIncorrect.png";
 		    image2.src = "../Images/ColbertDefault.png";
+		    playTXFile();
 		}	
 	QuestionPlaying = false;
 	document.getElementById('whoQ').innerHTML = SadMessage;
@@ -216,7 +220,7 @@ function WrongAnswer()		// Color functionality if player is wrong
 	document.getElementsByClassName('button-0')[0].innerHTML = "NEXT!";
 }
 
-function reset()
+function reset() //reset method for clearing 
 {
 	var image = document.getElementById('myImage');
 	var image2 = document.getElementById('myImage2');
@@ -228,7 +232,7 @@ function reset()
     	x.style.color = "Black"; 
 }
 
-
+//Establishing countdown style timer
 var timeInSecs;
 var ticker;
 
@@ -257,11 +261,25 @@ document.getElementById("countdown").innerHTML = secs;
 function TimeRunsOut()
 {
 	endTimer();
-	WrongAnswer();
+	var image = document.getElementById('myImage');
+	var image2 = document.getElementById('myImage2');
+	if(RealAnswer == "Colbert")
+		{
+			image.src = "../Images/SelectedTrumpIncorrect.png";
+		    image2.src = "../Images/SelectedColbertCorrect.png";
+		    playCXFile();
+		}
+	else
+		{
+			image.src = "../Images/SelectedTrumpCorrect.png";
+		    image2.src = "../Images/SelectedColbertIncorrect.png";
+		   	playTXFile();
+		}	
 	document.getElementById('whoQ').innerHTML = "Time's Up!";
 	var x = document.getElementById('whoQ');
     x.style.fontSize = "35px";           
-    x.style.color = "Red"; 
+    x.style.color = "Red";
+    document.getElementsByClassName('button-0')[0].innerHTML = "NEXT!";
 }
 
 function endTimer()
@@ -269,3 +287,48 @@ function endTimer()
 	clearInterval(ticker); // stop counting at zero
 }
 
+//These functions deal with the voice files
+function playTCFile()
+{
+	var CorrectTrumpSound = 	[
+									document.getElementById('trumpBrilliant'),
+									document.getElementById('trumpCongrats'),
+									document.getElementById('trumpEK'),
+									document.getElementById('trumpFantastic'),
+								];
+	var TCInt = parseInt((Math.random() * CorrectTrumpSound.length), 10);
+	CorrectTrumpSound[TCInt].play();
+}
+function playTXFile()
+{
+	var IncorrectTrumpSound = 	[
+									document.getElementById('trumpFired1'),
+									document.getElementById('trumpFired2'),
+									document.getElementById('trumpWantSome'),
+									document.getElementById('trumpIDTS'),
+								];
+	var TXInt = parseInt((Math.random() * IncorrectTrumpSound.length), 10);
+	IncorrectTrumpSound[TXInt].play();
+}
+function playCCFile()
+{
+	var CorrectColbertSound = 	[
+									document.getElementById('colbertAmerica'),
+									document.getElementById('colbertRingtone'),
+									document.getElementById('colbertLegal'),
+									document.getElementById('colbertYes'),
+								];
+	var CCInt = parseInt((Math.random() * CorrectColbertSound.length), 10);
+	CorrectColbertSound[CCInt].play();
+}
+function playCXFile()
+{
+	var IncorrectColbertSound = [
+									document.getElementById('colbertDung'),
+									document.getElementById('colbertNope'),
+									document.getElementById('colbertBam'),
+									document.getElementById('colbertNo'),
+								];
+	var CXInt = parseInt((Math.random() * IncorrectColbertSound.length), 10);
+	IncorrectColbertSound[CXInt].play();
+}
