@@ -143,10 +143,7 @@ h2
 .values
 {
 	text-align: center;
-}
-.timerCount
-{
-	display: inline-block;
+	margin-top: 25px;
 }
 #cStreak, #bStreak, #rGuesses, #wGuesses
 {
@@ -156,11 +153,10 @@ h2
 }
 #timer, #countdown
 {
+	display: inline;
+	vertical-align: middle;
 	text-align: center;
-	margin-top: 50px;
-	margin-bottom: 0px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
 	font-size: 24px;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-weight: bold;
