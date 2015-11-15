@@ -201,6 +201,38 @@ h1
     -webkit-transform: translate(0px,5px);
     border-bottom: 1px solid;
 }
+.button-1, .button-2
+{
+	position: relative;
+	padding:10px 40px;
+	border-radius: 3px;
+	color: #000000;
+	margin: auto;
+    text-decoration: none;  
+    background-color: #ffde6a;
+    border-bottom: 5px solid #ffcc1a;
+    text-shadow: 0px -2px #ffde6a;
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 40px;
+	box-shadow: 5px 5px 5px #000101;
+}
+.button-1:hover, 
+.button-1:focus,
+.button-2:hover,
+.button-2:focus
+{
+    text-decoration: none;
+    color: #000000;
+}
+.button-1:active,
+.button-2:active
+{
+	transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    border-bottom: 1px solid;
+}
 #trumpstyle, #colbstyle, #hillaryStyle, #obamaStyle, #dt, #sc
 {
 	display: inline-block;
