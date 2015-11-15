@@ -27,7 +27,8 @@ h1
 #topColor
 {
 	margin-top: -40px;
-	margin-left: 25%;
+	margin-left: auto;
+	margin-right: auto;
     width: 980px;
     height: 400px;
     background: #ED1C24;
@@ -90,10 +91,32 @@ position: absolute;
 	font-size: 16px;
 	box-shadow: 5px 5px 5px #000101;
 }
-#nextBtn
+.button-0
 {
+	position: relative;
+	padding:10px 40px;
+	border-radius: 3px;
+	color: #000000;
+	margin: auto;
+    text-decoration: none;  
+    background-color: #ffde6a;
+    border-bottom: 5px solid #ffcc1a;
+    text-shadow: 0px -2px #ffde6a;
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	font-size: 14px;
+	font-size: 40px;
+}
+.button-0:hover, 
+.button-0:focus {
+    text-decoration: none;
+    color: #000000;
+}
+
+.button-0:active {
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    border-bottom: 1px solid;
 }
 #trump, #colbert
 {
@@ -116,4 +139,25 @@ h2
 	margin-top: -10px;
 	margin-bottom: 0px;
 	padding: 0px;	
+}
+.values
+{
+	text-align: center;
+	margin-top: 25px;
+}
+#cStreak, #bStreak, #rGuesses, #wGuesses
+{
+	font-size: 16px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight: bold;
+}
+#timer, #countdown
+{
+	display: inline;
+	vertical-align: middle;
+	text-align: center;
+	margin: auto;
+	font-size: 24px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight: bold;
 }
