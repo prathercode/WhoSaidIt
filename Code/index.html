@@ -13,6 +13,16 @@
 </head>
 
 <body onload = "setStartingStats()">
+				
+				<audio id="trumpBrilliant"><source src="../Audio/Final Audio Files/TrumpBrilliant.mp3" type="audio/mp3"></audio>
+				<audio id="trumpCongrats"><source src="../Audio/Final Audio Files/TrumpCongratulations.wav" type="audio/wav"></audio>
+				<audio id="trumpEK"><source src="../Audio/Final Audio Files/TrumpEveryoneKnows.wav" type="audio/wav"></audio>
+				<audio id="trumpFantastic"><source src="../Audio/Final Audio Files/TrumpFantastic.wav" type="audio/wav"></audio>
+				<audio id="trumpFired1"><source src="../Audio/Final Audio Files/TrumpFired1.wav" type="audio/wav"></audio>
+				<audio id="trumpFired2"><source src="../Audio/Final Audio Files/TrumpFired2.wav" type="audio/wav"></audio>
+				<audio id="trumpFired3"><source src="../Audio/Final Audio Files/TrumpFired3.wav" type="audio/wav"></audio>
+				<audio id="trumpIDTS"><source src="../Audio/Final Audio Files/TrumpIDTS.wav" type="audio/wav"></audio>
+
 <div class="backgroundShapes">
 	<div id="topColor">
 
@@ -45,7 +55,7 @@
 		<div id="bottomColor">
 			<br>
 			<div id="nextBtn" align="center">
-				<a href="#" onclick="ButtonMethod(); endTimer(); startTimer(16)"class="button-0">START!</a>
+				<a href="#" onclick="ButtonMethod(); endTimer(); startTimer(16); playFile()"class="button-0">START!</a>
 			</div>
 
 			<div class="hillary_style">
