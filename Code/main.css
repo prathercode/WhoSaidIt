@@ -5,6 +5,27 @@ body
 	max-height: 100%;
 	background-image: url("../Images/CorkBoard.jpg");
 }
+footer
+{
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+    height: 24px;
+    background: #2D2D2D;
+    bottom: 0px;
+    text-align: center;
+    color: white;
+    font-family: 'Share Tech Mono';
+    font-size: 14px;
+    padding-top: 8px;
+}
+#linky
+{
+	color: white;
+	text-decoration: underline;
+}
 h1
 {
 	font-size: 60px;
