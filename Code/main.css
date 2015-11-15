@@ -151,37 +151,16 @@ h2
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-weight: bold;
 }
-#cStreak, #cSVal
+#crossmark, #wGVal, #tab, #checkmark, #rGVal, #bStreak, #bSVal, #cStreak, #cSVal
 {
 	display: inline;
 	vertical-align: middle;
 	text-align: center;
 	margin: auto;
 }
-#bStreak, #bSVal
+#cSVal, #bSVal, #rGVal, #wGVal
 {
-	display: inline;
-	vertical-align: middle;
-	text-align: center;
-	margin: auto;
-}
-#rGuesses, #rGVal
-{
-	display: inline;
-	vertical-align: middle;
-	text-align: center;
-	margin: auto;
-}
-#wGuesses, #wGVal
-{
-	display: inline;
-	vertical-align: middle;
-	text-align: center;
-	margin: auto;
-}
-#cSVal, #wGVal, #bSVal, #rGVal
-{
-	font-size: 16px;
+	font-size: 26px;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-weight: bold;
 }
