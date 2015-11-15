@@ -98,13 +98,13 @@ position: absolute;
 	color: #000000;
 	margin: auto;
     text-decoration: none;  
-    background-color: #00AEEF;
-    border-bottom: 5px solid #2980B9;
-    text-shadow: 0px -2px #2980B9;
+    background-color: #ffde6a;
+    border-bottom: 5px solid #ffcc1a;
+    text-shadow: 0px -2px #ffde6a;
 	transition: all 0.1s;
 	-webkit-transition: all 0.1s;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	font-size: 25px;
+	font-size: 40px;
 }
 .button-0:hover, 
 .button-0:focus {
@@ -138,4 +138,20 @@ h2
 	margin-top: -10px;
 	margin-bottom: 0px;
 	padding: 0px;	
+}
+#cStreak, #bStreak, #rGuesses, #wGuesses
+{
+	text-align: center;
+	font-size: 16px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight: bold;
+}
+#timer
+{
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 0px;
+	font-size: 24px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight: bold;
 }
