@@ -8,7 +8,7 @@
 
 </head>
 
-<body>
+<body onload = "setStartingStats()">
 <div class="backgroundShapes">
 	<div id="topColor">
 
@@ -26,11 +26,11 @@
 		
 		<div class="colbert-with-img">
 			<div id="colbstyle">		
-				<img id="myImage2" onclick="SelectColbert(), endTimer()" src="../Images/ColbertDefault.png" width="270" height="202.5" alt="Steven Colbert"/>
+				<img id="myImage2" onclick="SelectColbert(); endTimer()" src="../Images/ColbertDefault.png" width="270" height="202.5" alt="Steven Colbert"/>
 			</div>
 		</div>	
 
-		<h2 id="whoQ">Who Said It?</h2>
+		<h2 id="whoQ" >Who Said It?</h2>
 
 		<div id="quoteSectn" align="center">
 			<p id="quote"></p>
@@ -41,7 +41,7 @@
 	<div id="bottomColor">
 		<br>
 		<div id="nextBtn" align="center">
-			<a href="#" onclick="DisplayQuote(); endTimer(); startTimer(16)"class="button-0">NEXT!</a>
+			<a href="#" onclick="DisplayQuote(); endTimer(); startTimer(16)"class="button-0">START!</a>
 		</div>
 		<div class="values">
 		<div class="timerCount">

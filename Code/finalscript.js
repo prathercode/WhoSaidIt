@@ -2,17 +2,25 @@ var QuestionPlaying = new Boolean(false);
 										//global variable that determines if a question is running
 window.RealAnswer;						//global variable that stores the correct answer for the current question
 window.SelectedAnswer;					//global variable that stores the player's answer
-window.HappyMessage = "Good Job!"		//global variable containing response if player is correct
-window.SadMessage	= "You're Fired!"	//global variable containing response if player is wrong
+window.HappyMessage = "Good Job!";		//global variable containing response if player is correct
+window.SadMessage	= "You're Fired!";	//global variable containing response if player is wrong
 var RightGuessCount = 0;
 var WrongGuessCount = 0;
 var Streak = 0;
 var TopStreak = 0;
 
+function setStartingStats()
+{
+	document.getElementById("rGVal").innerHTML = RightGuessCount;
+	document.getElementById("wGVal").innerHTML = WrongGuessCount;	
+	document.getElementById("cSVal").innerHTML = Streak;
+	document.getElementById("bSVal").innerHTML = TopStreak;
+}
 
 
-function DisplayQuote() 				//function that displays new questions
+function DisplayQuote() 				//function that displays new questions. Called by clicking start button, and then by clicking next comment.
 {	
+	document.getElementsByClassName('button-0')[0].innerHTML = "NEXT!"  // Changes name of thing to next				
 	reset();							//resets for the initialization of a question cycle
 	QuestionPlaying = true;				//Demarcates the initialization of a question cycle
 	var ToBeDisplayed;					//Variable that stores a number that will determine which quote is displayed
@@ -84,8 +92,7 @@ function answerQuote()		//Checks if the player is correct or incorrect
 {
 	if (SelectedAnswer === RealAnswer)
 		{
-			
-     	 	CorrectAnswer();
+			CorrectAnswer();
 		}
 	
 	else
@@ -111,6 +118,8 @@ function CorrectAnswer()	//Color functionality if player is correct
 				image.src = "../Images/SelectedTrumpCorrect.png";
 		        image2.src = "../Images/SelectedTrumpCorrectColbert.jpg";
 		}
+
+	QuestionPlaying = false;
 	document.getElementById('whoQ').innerHTML = HappyMessage;
 	RightGuessCount++;
 	Streak++;
@@ -141,6 +150,7 @@ function WrongAnswer()		// Color functionality if player is wrong
 			image.src = "../Images/SelectedTrumpIncorrect.png";
 		    image2.src = "../Images/ColbertDefault.png";
 		}	
+	QuestionPlaying = false;
 	document.getElementById('whoQ').innerHTML = SadMessage;
 	WrongGuessCount++;
 	if(Streak>TopStreak)
@@ -160,7 +170,7 @@ function reset()
 	var image2 = document.getElementById('myImage2');
 		image.src = "../Images/TrumpDefault.png";
 		image2.src = "../Images/ColbertDefault.png";
-	document.getElementById('whoQ').innerHTML = 'WHO SAID IT?';
+	document.getElementById('whoQ').innerHTML = 'Who Said It?';
 }
 
 
@@ -173,11 +183,6 @@ function startTimer(secs)
 	ticker = setInterval("tick()",1000);   // every second
 }
 
-function endTimer()
-{
-	clearInterval(ticker);
-}
-
 function tick() 
 {
 	var secs = timeInSecs;
@@ -188,9 +193,23 @@ function tick()
 	
 	else 
 	{
-		clearInterval(ticker); // stop counting at zero
-							   // startTimer(60);  // remove forward slashes in front of startTimer to repeat if required
+		TimeRunsOut();
 	}
 
 document.getElementById("countdown").innerHTML = secs;
 }  
+
+function TimeRunsOut()
+{
+	endTimer();
+	WrongAnswer();
+	document.getElementById('whoQ').innerHTML = "Time's Up!";
+	var x = document.getElementById('whoQ');
+    x.style.fontSize = "25px";           
+    x.style.color = "black"; 
+}
+
+function endTimer()
+{
+	clearInterval(ticker); // stop counting at zero
+}
