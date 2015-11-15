@@ -255,7 +255,7 @@ function playTXFile()
 	var IncorrectTrumpSound = 	[
 									document.getElementById('trumpFired1'),
 									document.getElementById('trumpFired2'),
-									document.getElementById('trumpFired3'),
+									document.getElementById('trumpWantSome'),
 									document.getElementById('trumpIDTS'),
 								];
 	var TXInt = parseInt((Math.random() * IncorrectTrumpSound.length), 10);
