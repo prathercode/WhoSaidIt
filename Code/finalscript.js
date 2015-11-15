@@ -116,6 +116,7 @@ function ButtonMethod() //manages the button that is start, pass, and next
 			document.getElementById("bSVal").innerHTML = TopStreak;
 		}
 	DisplayQuote();
+	
 }
 
 
