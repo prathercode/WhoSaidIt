@@ -151,6 +151,28 @@ h2
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-weight: bold;
 }
+#cStreak, #cSVal
+{
+	display: inline;
+	vertical-align: middle;
+	text-align: center;
+	margin: auto;
+}
+#bStreak, #bSVal
+{
+	display: inline;
+	vertical-align: middle;
+	text-align: center;
+	margin: auto;
+}
+#rGuesses, #rGVal
+{
+
+}
+#wGuesses, #wSVal
+{
+
+}
 #timer, #countdown
 {
 	display: inline;
