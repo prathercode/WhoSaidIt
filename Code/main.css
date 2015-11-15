@@ -11,6 +11,19 @@ h1
 	text-align: center;
 	font-family: Impact, Charcoal, sans-serif;
 }
+#whoQ
+{
+	color: black;
+	background-color: #ffde6a;
+    border: 2px solid black;
+    padding: 5px;
+    width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 10px;
+	box-shadow: 5px 5px 5px #000101;
+}
 #myImage, #myImage2
 {
     box-shadow: 5px 5px 5px #000101;	
@@ -46,8 +59,8 @@ h1
 }
 #bottomColor
 {
-border-radius: 0px 0px 15px 15px;	
-position: absolute;
+	border-radius: 0px 0px 15px 15px;	
+	position: absolute;
     width: 980px;
     height: 400px;
     background: #ED1C24;
@@ -66,12 +79,33 @@ position: absolute;
     padding-left: 30px;
     text-align:center;
 }
+.hillary_style
+{
+ 	display: inline-block;
+	float: left;
+ 	margin-left: auto;
+ 	padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    text-align:center;
+}
 .colbert-with-img
 {
  	display: inline;
  	float: right;
  	padding-top: 0px;
     padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    text-align:center;
+}
+.obama_style
+{
+ 	display: inline;
+ 	float: right;
+ 	padding-top: 0px;
+    padding-right: 60px;
     padding-bottom: 50px;
     padding-left: 30px;
     text-align:center;
@@ -106,27 +140,19 @@ position: absolute;
 	-webkit-transition: all 0.1s;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 40px;
+	box-shadow: 5px 5px 5px #000101;
 }
 .button-0:hover, 
 .button-0:focus {
     text-decoration: none;
     color: #000000;
 }
-
 .button-0:active {
     transform: translate(0px,5px);
     -webkit-transform: translate(0px,5px);
     border-bottom: 1px solid;
 }
-#trump, #colbert
-{
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 28px;
-	color: white;
-	display: inline-block;
-	vertical-align: middle;
-}
-#trumpstyle, #colbstyle
+#trumpstyle, #colbstyle, #hillaryStyle, #obamaStyle
 {
 	display: inline-block;
 	vertical-align: middle;
@@ -143,47 +169,62 @@ h2
 .values
 {
 	text-align: center;
-	margin-top: 25px;
+	margin-top: 35px;
+}
+#bottomValues
+{
+	color: black;
+	background-color: #ffde6a;
+    border: 2px solid black;
+    width: 20%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	box-shadow: 5px 5px 5px #000101;
+	height: 130px;
+}
+#timerValues
+{
+	color: white;
+	background-color: #2D2D2D;
+    border: 2px solid black;
+    width: 17.5%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 20px;
+	box-shadow: 5px 5px 5px #000101;
+	vertical-align: middle;
+	height: 42px;
 }
 #cStreak, #bStreak, #rGuesses, #wGuesses
 {
-	font-size: 16px;
+	font-size: 20px;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-weight: bold;
+	vertical-align: middle;
 }
-#cStreak, #cSVal
+#crossmark, #wGVal, #tab, #checkmark, #rGVal, #bStreak, #bSVal, #cStreak, #cSVal
 {
 	display: inline;
 	vertical-align: middle;
 	text-align: center;
 	margin: auto;
 }
-#bStreak, #bSVal
+#cSVal, #bSVal
 {
-	display: inline;
-	vertical-align: middle;
-	text-align: center;
-	margin: auto;
-}
-#rGuesses, #rGVal
-{
-	display: inline;
-	vertical-align: middle;
-	text-align: center;
-	margin: auto;
-}
-#wGuesses, #wGVal
-{
-	display: inline;
-	vertical-align: middle;
-	text-align: center;
-	margin: auto;
-}
-#cSVal, #wGVal, #bSVal, #rGVal
-{
-	font-size: 16px;
+	font-size: 20px;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-weight: bold;
+	vertical-align: middle;
+}
+#rGVal, #wGVal
+{
+	font-size: 20px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight: bold;
+	vertical-align: middle;
 }
 #timer, #countdown
 {
@@ -191,7 +232,7 @@ h2
 	vertical-align: middle;
 	text-align: center;
 	margin: auto;
-	font-size: 24px;
+	font-size: 28px;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-weight: bold;
 }

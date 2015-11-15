@@ -2,15 +2,29 @@ var QuestionPlaying = new Boolean(false);
 										//global variable that determines if a question is running
 window.RealAnswer;						//global variable that stores the correct answer for the current question
 window.SelectedAnswer;					//global variable that stores the player's answer
-window.HappyMessage = "Good Job!"		//global variable containing response if player is correct
-window.SadMessage	= "You're Fired!"	//global variable containing response if player is wrong
+window.HappyMessage = "Good Job!";		//global variable containing response if player is correct
+window.SadMessage	= "You're Fired!";	//global variable containing response if player is wrong
 var RightGuessCount = 0;
 var WrongGuessCount = 0;
 var Streak = 0;
 var TopStreak = 0;
 
+<<<<<<< HEAD
 function DisplayQuote() 				//function that displays new questions
+=======
+function setStartingStats()
+{
+	document.getElementById("rGVal").innerHTML = RightGuessCount;
+	document.getElementById("wGVal").innerHTML = WrongGuessCount;	
+	document.getElementById("cSVal").innerHTML = Streak;
+	document.getElementById("bSVal").innerHTML = TopStreak;
+}
+
+
+function DisplayQuote() 				//function that displays new questions. Called by clicking start button, and then by clicking next comment.
+>>>>>>> master
 {	
+	document.getElementsByClassName('button-0')[0].innerHTML = "NEXT!"  // Changes name of thing to next				
 	reset();							//resets for the initialization of a question cycle
 	QuestionPlaying = true;				//Demarcates the initialization of a question cycle
 	var ToBeDisplayed;					//Variable that stores a number that will determine which quote is displayed
@@ -21,7 +35,6 @@ function DisplayQuote() 				//function that displays new questions
 					 		"Medicare is like a nice set of cufflinks. Nobody wears cufflinks anymore.",
 							"I don't accept the status quo. I do accept Visa, MasterCard, or American Express.",
 							"It used to be, everyone was entitled to their own opinion, but not their own facts. But that's not the case anymore. Facts matter not at all. Perception is everything.",
-							"We have this idea in our minds that there's this separation of church and state in America, which I think is a good thing. And we extend that to our politics - not just church and state, but it's also there's a separation of religion and politics. But of course there isn't.",
 							"We got Obama in there now and the Chinese testing him bing bing bing. You get a woman in there bing bom boom the whole world goes after her.", 
 							"If our founding fathers wanted us to care about the rest of the world, they wouldn't have declared our independence from it.",
 							"The pen is mightier than the sword if you shoot that pen out of a gun.",
@@ -56,6 +69,23 @@ function DisplayQuote() 				//function that displays new questions
 
 	ToBeDisplayed = parseInt((Math.random() * QuoteDB.length), 10);
 	document.getElementById("quote").innerHTML = QuoteDB[ToBeDisplayed];	//Displays a quote
+	document.getElementsByClassName('button-0')[0].innerHTML = "PASS!";
+}
+
+
+function ButtonMethod()
+{
+	if (document.getElementsByClassName('button-0')[0].innerHTML == ("PASS!")) 
+		{
+			if(Streak>TopStreak)
+				{
+					TopStreak = Streak;
+				}
+			Streak = 0;
+			document.getElementById("cSVal").innerHTML = Streak;
+			document.getElementById("bSVal").innerHTML = TopStreak;
+		}
+	DisplayQuote();
 }
 
 
@@ -82,8 +112,7 @@ function answerQuote()		//Checks if the player is correct or incorrect
 {
 	if (SelectedAnswer === RealAnswer)
 		{
-			
-     	 	CorrectAnswer();
+			CorrectAnswer();
 		}
 	
 	else
@@ -109,6 +138,8 @@ function CorrectAnswer()	//Color functionality if player is correct
 				image.src = "../Images/SelectedTrumpCorrect.png";
 		        image2.src = "../Images/SelectedTrumpCorrectColbert.jpg";
 		}
+
+	QuestionPlaying = false;
 	document.getElementById('whoQ').innerHTML = HappyMessage;
 	RightGuessCount++;
 	Streak++;
@@ -120,6 +151,7 @@ function CorrectAnswer()	//Color functionality if player is correct
 	document.getElementById("wGVal").innerHTML = WrongGuessCount;
 	document.getElementById("cSVal").innerHTML = Streak;
 	document.getElementById("bSVal").innerHTML = TopStreak;
+	document.getElementsByClassName('button-0')[0].innerHTML = "NEXT!";
 }
 
 function WrongAnswer()		// Color functionality if player is wrong
@@ -139,6 +171,7 @@ function WrongAnswer()		// Color functionality if player is wrong
 			image.src = "../Images/SelectedTrumpIncorrect.png";
 		    image2.src = "../Images/ColbertDefault.png";
 		}	
+	QuestionPlaying = false;
 	document.getElementById('whoQ').innerHTML = SadMessage;
 	WrongGuessCount++;
 	if(Streak>TopStreak)
@@ -150,6 +183,7 @@ function WrongAnswer()		// Color functionality if player is wrong
 	document.getElementById("wGVal").innerHTML = WrongGuessCount;
 	document.getElementById("cSVal").innerHTML = Streak;
 	document.getElementById("bSVal").innerHTML = TopStreak;
+	document.getElementsByClassName('button-0')[0].innerHTML = "NEXT!";
 }
 
 function reset()
@@ -158,7 +192,10 @@ function reset()
 	var image2 = document.getElementById('myImage2');
 		image.src = "../Images/TrumpDefault.png";
 		image2.src = "../Images/ColbertDefault.png";
-	document.getElementById('whoQ').innerHTML = 'WHO SAID IT?';
+		document.getElementById('whoQ').innerHTML = 'Who Said It?';
+	var x = document.getElementById('whoQ');
+   		x.style.fontSize = "24px";           
+    	x.style.color = "Black"; 
 }
 
 
@@ -171,11 +208,6 @@ function startTimer(secs)
 	ticker = setInterval("tick()",1000);   // every second
 }
 
-function endTimer()
-{
-	clearInterval(ticker);
-}
-
 function tick() 
 {
 	var secs = timeInSecs;
@@ -186,9 +218,23 @@ function tick()
 	
 	else 
 	{
-		clearInterval(ticker); // stop counting at zero
-							   // startTimer(60);  // remove forward slashes in front of startTimer to repeat if required
+		TimeRunsOut();
 	}
 
 document.getElementById("countdown").innerHTML = secs;
 }  
+
+function TimeRunsOut()
+{
+	endTimer();
+	WrongAnswer();
+	document.getElementById('whoQ').innerHTML = "Time's Up!";
+	var x = document.getElementById('whoQ');
+    x.style.fontSize = "35px";           
+    x.style.color = "Red"; 
+}
+
+function endTimer()
+{
+	clearInterval(ticker); // stop counting at zero
+}

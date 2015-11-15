@@ -7,7 +7,7 @@
 	</script>
 </head>
 
-<body>
+<body onload = "setStartingStats()">
 <div class="backgroundShapes">
 	<div id="topColor">
 
@@ -25,33 +25,62 @@
 		
 		<div class="colbert-with-img">
 			<div id="colbstyle">		
-				<img id="myImage2" onclick="SelectColbert(), endTimer()" src="../Images/ColbertDefault.png" width="270" height="202.5" alt="Steven Colbert"/>
+				<img id="myImage2" onclick="SelectColbert(); endTimer()" src="../Images/ColbertDefault.png" width="270" height="202.5" alt="Steven Colbert"/>
 			</div>
 		</div>	
 
-		<h2 id="whoQ">Who Said It?</h2>
+		<h2 id="whoQ" >Who Said It?</h2>
 
 		<div id="quoteSectn" align="center">
-			<p id="quote"></p>
+			<p id="quote">Who said it? Late Night comedian Stephen Colbert, or GOP Presidential front-runner, Donald Trump? </p>
 		</div>
 		<br>
 	</div>
 	<div id="divider"></div>
-	<div id="bottomColor">
-		<br>
-		<div id="nextBtn" align="center">
-			<a href="#" onclick="DisplayQuote(); endTimer(); startTimer(16)"class="button-0">NEXT!</a>
+		<div id="bottomColor">
+			<br>
+			<div id="nextBtn" align="center">
+				<a href="#" onclick="ButtonMethod(); endTimer(); startTimer(16)"class="button-0">START!</a>
+			</div>
+
+			<div class="hillary_style">
+			<div id="hillaryStyle">
+				<img id="hillaryStick" src="../Images/StickyNotes.png" width="286" height="297" alt="StickyNotes"/>
+			</div>
+			</div>
+			
+			<div class="obama_style">
+			<div id="obamaStyle">
+				<img id="obamaTrump" src="../Images/TrumpPoster.png" width="216" height="291" alt="TrumpPoster"/>
+			</div>
+			</div>
+
+			<div class="values">
+				<div id="timerValues">
+					<p id="timer">Timer: <div id="countdown"></div></p>
+				</div>
+
+				<div id="bottomValues">
+					<p id="cStreak">Current Streak: <div id="cSVal"></div></p>
+					<p id="bStreak">Best Streak: <div id="bSVal"></div></p>
+					<img id="checkmark" src="../Images/CheckMark.png" width="25" height="25" alt="checkmark"/><div id="rGVal"></div><p id="tab">&nbsp;</p>
+					<img id="crossmark" src="../Images/BlackXMark.png" width="25" height="25" alt="crossmark"/><div id="wGVal"></div>
+
+				<!--<p id="cStreak">Current Streak: 
+					<div id="cSVal"></div>
+					<p id="tab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+					<img id="checkmark" src="../Images/CheckMark.png" width="25" height="25" alt="checkmark"/>
+					<div id="rGVal"></div>
+					<p id="tab">&nbsp;</p>
+					<img id="crossmark" src="../Images/BlackXMark.png" width="25" height="25" alt="crossmark"/>
+					<div id="wGVal"></div>
+					<p id="tab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+					<p id="bStreak">Best Streak: 
+					<div id="bSVal"></div></p>-->
+
+				</div>
+			</div>
 		</div>
-		<div class="values">
-		<div class="timerCount">
-			<p id="timer">Timer: <div id="countdown"></div></p>
-		</div>
-			<p id="cStreak">Current Streak: <div id="cSVal"></div></p>
-			<p id="bStreak">Best Streak: <div id="bSVal"></div></p>
-			<p id="rGuesses">Right Guesses: <div id="rGVal"></div></p>
-			<p id="wGuesses">Wrong Guesses: <div id="wGVal"></div></p>
-		</div>
-	</div>
 	</div>
 </div>
 </body>
