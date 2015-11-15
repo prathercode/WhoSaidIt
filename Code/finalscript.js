@@ -234,3 +234,4 @@ function endTimer()
 {
 	clearInterval(ticker); // stop counting at zero
 }
+
