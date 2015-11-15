@@ -9,9 +9,6 @@ var WrongGuessCount = 0;
 var Streak = 0;
 var TopStreak = 0;
 
-<<<<<<< HEAD
-function DisplayQuote() 				//function that displays new questions
-=======
 function setStartingStats()
 {
 	document.getElementById("rGVal").innerHTML = RightGuessCount;
@@ -22,7 +19,6 @@ function setStartingStats()
 
 
 function DisplayQuote() 				//function that displays new questions. Called by clicking start button, and then by clicking next comment.
->>>>>>> master
 {	
 	document.getElementsByClassName('button-0')[0].innerHTML = "NEXT!"  // Changes name of thing to next				
 	reset();							//resets for the initialization of a question cycle
