@@ -4,7 +4,9 @@ window.RealAnswer;						//global variable that stores the correct answer for the
 window.SelectedAnswer;					//global variable that stores the player's answer
 window.HappyMessage = "Good Job!"		//global variable containing response if player is correct
 window.SadMessage	= "You're Fired!"	//global variable containing response if player is wrong
-
+var Score = 0;
+var Streak = 0;
+var TopStreak = 0;
 
 
 
@@ -17,16 +19,29 @@ function DisplayQuote() 				//function that displays new questions
 
 	var ColbertQuotes = [				//Array Database of Colbert Quotes
 							"I apologize for being perfect", 
-					 		"Medicare is like a nice set of cufflinks. Nobody wears cufflinks anymore."
-				   		];
+					 		"Medicare is like a nice set of cufflinks. Nobody wears cufflinks anymore.",
+							"I don't accept the status quo. I do accept Visa, MasterCard, or American Express.",
+							"It used to be, everyone was entitled to their own opinion, but not their own facts. But that's not the case anymore. Facts matter not at all. Perception is everything.",
+							"We have this idea in our minds that there's this separation of church and state in America, which I think is a good thing. And we extend that to our politics - not just church and state, but it's also there's a separation of religion and politics. But of course there isn't.",
+							"We got Obama in there now and the Chinese testing him bing bing bing. You get a woman in there bing bom boom the whole world goes after her.", 
+							"If our founding fathers wanted us to care about the rest of the world, they wouldn't have declared our independence from it.",
+							"The pen is mightier than the sword if you shoot that pen out of a gun.",
+							"Of course! Jeb Bush! America is hungry for another leader from that talented family!",
+							"[I'm] a nice guy. I go to church I teach Sunday school. I have family values."
+						];
 
 
 	var TrumpQuotes = [ 				//Array Database of Trump Quotes
-							"We got Obama in there now and the Chinese testing him bing bing bing. You get a woman in there bing bom boom the whole world goes after her.", 
-							"I think apologizing's a great thing, but you have to be wrong… I will absolutely apologize, sometimes in the hopefully distant future, if I'm ever wrong.",
+							
+							"I think apologizing's a great thing, but you have to be wrong... I will absolutely apologize, sometimes in the hopefully distant future, if I'm ever wrong.",
 							"It's freezing and snowing in New York. We need global warming!", 
-							"So many people have told me that I should host Meet the Press and replace the moron who is on now. Just too busy, especially next 10 years!"
-					  ];
+							"So many people have told me that I should host Meet the Press and replace the moron who is on now. Just too busy, especially next 10 years!",
+							"I try to learn from the past, but I plan for the future by focusing exclusively on the present. That's where the fun is.",
+							"If you can't get rich dealing with politicians, there's something wrong with you.",
+							"Robert Pattinson should not take back Kristen Stewart. She cheated on him like a dog, and will do it again, just watch. He can do much better!",
+							"My fingers are long and beautiful, as, it has been well been documented, are various other parts of my body."
+						];
+
 
 	if(Math.random()<.5)				//Randomly determines if question should be a Colbert or Trump quote
 		{
@@ -96,6 +111,14 @@ function CorrectAnswer()	//Color functionality if player is correct
 		        image2.src = "../Images/SelectedTrumpCorrectColbert.jpg";
 		}
 	document.getElementById('whoQ').innerHTML = HappyMessage;
+	Score++;
+	Streak++;
+	if(Streak>TopStreak)
+	{
+		TopStreak = Streak;
+	}
+	alert("Score: "+Score.toString()+", Current Streak: "+Streak.toString()+", Hottest Streak: "+TopStreak.toString());
+
 }
 
 function WrongAnswer()		// Color functionality if player is wrong
@@ -116,6 +139,13 @@ function WrongAnswer()		// Color functionality if player is wrong
 		    image2.src = "../Images/ColbertDefault.png";
 		}	
 	document.getElementById('whoQ').innerHTML = SadMessage;
+	Score--;
+	if(Streak>TopStreak)
+	{
+		TopStreak = Streak;
+	}
+	Streak = 0;
+	alert("Score: "+Score.toString()+", Current Streak: "+Streak.toString()+", Hottest Streak: "+TopStreak.toString());
 }
 
 function reset()
@@ -124,7 +154,12 @@ function reset()
 	var image2 = document.getElementById('myImage2');
 		image.src = "../Images/TrumpDefault.png";
 		image2.src = "../Images/ColbertDefault.png";
-	document.getElementById('whoQ').innerHTML = 'WHO SAID THIS QUOTE?';
+	document.getElementById('whoQ').innerHTML = 'WHO SAID IT?';
 }
 
+//Score
+
+//Current Streak
+
+//Best Streak
 
