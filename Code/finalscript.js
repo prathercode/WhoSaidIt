@@ -9,8 +9,6 @@ var WrongGuessCount = 0;
 var Streak = 0;
 var TopStreak = 0;
 
-
-
 function DisplayQuote() 				//function that displays new questions
 {	
 	reset();							//resets for the initialization of a question cycle
