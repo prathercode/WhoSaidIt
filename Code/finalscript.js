@@ -263,22 +263,23 @@ function TimeRunsOut()
 	endTimer();
 	var image = document.getElementById('myImage');
 	var image2 = document.getElementById('myImage2');
-	if(CorrectAnswer == "Colbert")
+	if(RealAnswer == "Colbert")
 		{
 			image.src = "../Images/SelectedTrumpIncorrect.png";
 		    image2.src = "../Images/SelectedColbertCorrect.png";
-		    playTXFile();
+		    playCXFile();
 		}
 	else
 		{
 			image.src = "../Images/SelectedTrumpCorrect.png";
 		    image2.src = "../Images/SelectedColbertIncorrect.png";
-		   	playCXFile();
+		   	playTXFile();
 		}	
 	document.getElementById('whoQ').innerHTML = "Time's Up!";
 	var x = document.getElementById('whoQ');
     x.style.fontSize = "35px";           
-    x.style.color = "Red"; 
+    x.style.color = "Red";
+    document.getElementsByClassName('button-0')[0].innerHTML = "NEXT!";
 }
 
 function endTimer()
