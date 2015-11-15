@@ -8,8 +8,6 @@ var RightGuessCount = 0;
 var WrongGuessCount = 0;
 var Streak = 0;
 var TopStreak = 0;
-var LastColbert;
-var LastTrump;
 
 function setStartingStats()
 {
@@ -66,37 +64,6 @@ function DisplayQuote() 				//function that displays new questions. Called by cl
 		}
 
 	ToBeDisplayed = parseInt((Math.random() * QuoteDB.length), 10);
-	if (RealAnswer == "Colbert") 
-		{
-			if (ToBeDisplayed==LastColbert)
-				{
-					if(ToBeDisplayed > (QuoteDB.length)/2)
-						{
-							ToBeDisplayed--;
-						}
-					else
-						{
-							ToBeDisplayed++;
-						}
-				}
-				LastColbert = ToBeDisplayed;
-		}		
-
-	else
-		{
-			if (ToBeDisplayed==LastTrump)
-				{
-					if(ToBeDisplayed > (QuoteDB.length)/2)
-						{
-							ToBeDisplayed--;
-						}
-					else
-						{
-							ToBeDisplayed++;
-						}
-				}
-				LastTrump = ToBeDisplayed;	
-		}	
 	document.getElementById("quote").innerHTML = QuoteDB[ToBeDisplayed];	//Displays a quote
 	document.getElementsByClassName('button-0')[0].innerHTML = "PASS!";
 }
@@ -158,6 +125,7 @@ function CorrectAnswer()	//Color functionality if player is correct
 		    	var image2 = document.getElementById('myImage2');
 				image.src = "../Images/SelectedColbertCorrectTrump.jpg";
 		        image2.src = "../Images/SelectedColbertCorrect.png";
+		        playCCFile();
 		}
 
 	else
@@ -166,6 +134,7 @@ function CorrectAnswer()	//Color functionality if player is correct
 		    	var image2 = document.getElementById('myImage2');
 				image.src = "../Images/SelectedTrumpCorrect.png";
 		        image2.src = "../Images/SelectedTrumpCorrectColbert.jpg";
+		        playTCFile();
 		}
 
 	QuestionPlaying = false;
@@ -191,7 +160,7 @@ function WrongAnswer()		// Color functionality if player is wrong
 		    var image2 = document.getElementById('myImage2');
 			image.src = "../Images/TrumpDefault.png";
 		    image2.src = "../Images/SelectedColbertIncorrect.png";
-
+		    playCXFile();
 		}	
 
 	else
@@ -200,6 +169,7 @@ function WrongAnswer()		// Color functionality if player is wrong
 		    var image2 = document.getElementById('myImage2');
 			image.src = "../Images/SelectedTrumpIncorrect.png";
 		    image2.src = "../Images/ColbertDefault.png";
+		    playTXFile();
 		}	
 	QuestionPlaying = false;
 	document.getElementById('whoQ').innerHTML = SadMessage;
@@ -269,3 +239,47 @@ function endTimer()
 	clearInterval(ticker); // stop counting at zero
 }
 
+function playTCFile()
+{
+	var CorrectTrumpSound = 	[
+									document.getElementById('trumpBrilliant'),
+									document.getElementById('trumpCongrats'),
+									document.getElementById('trumpEK'),
+									document.getElementById('trumpFantastic'),
+								];
+	var TCInt = parseInt((Math.random() * CorrectTrumpSound.length), 10);
+	CorrectTrumpSound[TCInt].play();
+}
+function playTXFile()
+{
+	var IncorrectTrumpSound = 	[
+									document.getElementById('trumpFired1'),
+									document.getElementById('trumpFired2'),
+									document.getElementById('trumpFired3'),
+									document.getElementById('trumpIDTS'),
+								];
+	var TXInt = parseInt((Math.random() * IncorrectTrumpSound.length), 10);
+	IncorrectTrumpSound[TXInt].play();
+}
+function playCCFile()
+{
+	var CorrectColbertSound = 	[
+									document.getElementById('trumpFired1'),
+									document.getElementById('trumpFired2'),
+									document.getElementById('trumpFired3'),
+									document.getElementById('trumpIDTS'),
+								];
+	var CCInt = parseInt((Math.random() * CorrectColbertSound.length), 10);
+	CorrectColbertSound[CCInt].play();
+}
+function playCXFile()
+{
+	var IncorrectColbertSound = [
+									document.getElementById('trumpFired1'),
+									document.getElementById('trumpFired2'),
+									document.getElementById('trumpFired3'),
+									document.getElementById('trumpIDTS'),
+								];
+	var CXInt = parseInt((Math.random() * IncorrectColbertSound.length), 10);
+	IncorrectColbertSound[CXInt].play();
+}
