@@ -333,3 +333,9 @@ function playCXFile()
 	var CXInt = parseInt((Math.random() * IncorrectColbertSound.length), 10);
 	IncorrectColbertSound[CXInt].play();
 }
+function minimize()
+{
+	alert(document.getElementById('dt').style.display);
+	document.getElementById('dt').style.display = "none";
+
+}

@@ -5,6 +5,9 @@ Readme
 
 This is the ReadMe for the TrumpOrColbert? web app produced from 11/13/15-11/15/15 at Princeton University's HackPrinceton event. 
 
+This application is a game in which users try to guess if a given quote was Trump or Colbert. Also provided are twitter feeds for both figures.
+
+
 This website will be accessible at: 
 If you wish to access it when it is not available, email arjuntalpallikar@utexas.edu
 You can also run it locally by opening index.html 
@@ -33,7 +36,7 @@ Thanks to CBS, Stephen Colbert, Donald Trump, and everyone at "The Late Show wit
 
 We also made use of Princeton's many amenities, including reimbursements, food, mentors, workshops, workspace, network, etc. 
 
-Software used included Sublime Text 2, Sublime Text 3, Google Chrome, and Adobe Illustrator. 
+Software used included Sublime Text 2, Sublime Text 3, Google Chrome, the Twitter API, and Adobe Illustrator. 
 
 We also used several resources available online:
 Trump "You're Fired!" sounds were acquired through episodes of The Apprentice, avilable on Youtube.
@@ -56,3 +59,4 @@ Donald Trump Stamp was posted at http://www.donaldtrumpstamp.com/
 
 Cork Board background was posted at public domain pictures, accessible here: http://www.publicdomainpictures.net/view-image.php?image=25664
 
+Donald Trump Thumbnail accessible at: http://www.businessinsider.com/nbc-donald-trump-2015-6

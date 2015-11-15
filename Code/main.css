@@ -7,20 +7,18 @@ body
 }
 footer
 {
-	position: absolute;
-	margin-left: auto;
-	margin-right: auto;
-	right: 0;
-	left: 0;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     height: 24px;
     background: #2D2D2D;
-    bottom: 0;
     text-align: center;
     color: white;
     font-family: 'Share Tech Mono';
     font-size: 14px;
-    padding-top: 8px;
-    vertical-align: middle;
+    width: 100%;
+    padding-top: 4px;
 }
 #linky
 {
@@ -200,6 +198,38 @@ h1
 }
 .button-0:active {
     transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    border-bottom: 1px solid;
+}
+.button-1, .button-2
+{
+	position: relative;
+	padding:10px 40px;
+	border-radius: 3px;
+	color: #000000;
+	margin: auto;
+    text-decoration: none;  
+    background-color: #ffde6a;
+    border-bottom: 5px solid #ffcc1a;
+    text-shadow: 0px -2px #ffde6a;
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 40px;
+	box-shadow: 5px 5px 5px #000101;
+}
+.button-1:hover, 
+.button-1:focus,
+.button-2:hover,
+.button-2:focus
+{
+    text-decoration: none;
+    color: #000000;
+}
+.button-1:active,
+.button-2:active
+{
+	transform: translate(0px,5px);
     -webkit-transform: translate(0px,5px);
     border-bottom: 1px solid;
 }
