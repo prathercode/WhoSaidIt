@@ -264,10 +264,10 @@ function playTXFile()
 function playCCFile()
 {
 	var CorrectColbertSound = 	[
-									document.getElementById('trumpFired1'),
-									document.getElementById('trumpFired2'),
-									document.getElementById('trumpFired3'),
-									document.getElementById('trumpIDTS'),
+									document.getElementById('colbertAmerica'),
+									document.getElementById('colbertRingtone'),
+									document.getElementById('colbertLegal'),
+									document.getElementById('colbertYes'),
 								];
 	var CCInt = parseInt((Math.random() * CorrectColbertSound.length), 10);
 	CorrectColbertSound[CCInt].play();
@@ -275,10 +275,10 @@ function playCCFile()
 function playCXFile()
 {
 	var IncorrectColbertSound = [
-									document.getElementById('trumpFired1'),
-									document.getElementById('trumpFired2'),
-									document.getElementById('trumpFired3'),
-									document.getElementById('trumpIDTS'),
+									document.getElementById('colbertDung'),
+									document.getElementById('colbertNope'),
+									document.getElementById('colbertBam'),
+									document.getElementById('colbertNo'),
 								];
 	var CXInt = parseInt((Math.random() * IncorrectColbertSound.length), 10);
 	IncorrectColbertSound[CXInt].play();
