@@ -263,7 +263,7 @@ function TimeRunsOut()
 	endTimer();
 	var image = document.getElementById('myImage');
 	var image2 = document.getElementById('myImage2');
-	if(CorrectAnswer==Colbert)
+	if(CorrectAnswer == "Colbert")
 		{
 			image.src = "../Images/SelectedTrumpIncorrect.png";
 		    image2.src = "../Images/SelectedColbertCorrect.png";
@@ -273,8 +273,8 @@ function TimeRunsOut()
 		{
 			image.src = "../Images/SelectedTrumpCorrect.png";
 		    image2.src = "../Images/SelectedColbertIncorrect.png";
-		    playCXFile();
-		}
+		   	playCXFile();
+		}	
 	document.getElementById('whoQ').innerHTML = "Time's Up!";
 	var x = document.getElementById('whoQ');
     x.style.fontSize = "35px";           
