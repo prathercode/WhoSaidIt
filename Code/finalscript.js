@@ -67,7 +67,8 @@ function DisplayQuote() 				//function that displays new questions. Called by cl
 
 	ToBeDisplayed = parseInt((Math.random() * QuoteDB.length), 10);
 	document.getElementById("quote").innerHTML = QuoteDB[ToBeDisplayed];	//Displays a quote
-	if (RealAnswer == "Colbert") 
+
+	if (RealAnswer == "Colbert")  //prevents back to back duplicates
 		{
 			if (ToBeDisplayed==LastColbert)
 				{
@@ -102,7 +103,7 @@ function DisplayQuote() 				//function that displays new questions. Called by cl
 }
 
 
-function ButtonMethod()
+function ButtonMethod() //manages the button that is start, pass, and next
 {
 	if (document.getElementsByClassName('button-0')[0].innerHTML == ("PASS!")) 
 		{
@@ -137,7 +138,7 @@ function SelectColbert()	//Initializes answering process if Colbert is the selec
 	}
 }
 
-function answerQuote()		//Checks if the player is correct or incorrect
+function answerQuote()		//Checks if the player is correct or incorrect, and makes a decision
 {
 	if (SelectedAnswer === RealAnswer)
 		{
@@ -150,7 +151,7 @@ function answerQuote()		//Checks if the player is correct or incorrect
 		}
 }
 
-function CorrectAnswer()	//Color functionality if player is correct
+function CorrectAnswer()	// if player choice is correct
 {
 	if 	(SelectedAnswer === "Colbert") 
 		{		
@@ -185,7 +186,7 @@ function CorrectAnswer()	//Color functionality if player is correct
 	document.getElementsByClassName('button-0')[0].innerHTML = "NEXT!";
 }
 
-function WrongAnswer()		// Color functionality if player is wrong
+function WrongAnswer()		// if player choice is wrong
 {
 	if (SelectedAnswer === "Colbert")
 		{
@@ -219,7 +220,7 @@ function WrongAnswer()		// Color functionality if player is wrong
 	document.getElementsByClassName('button-0')[0].innerHTML = "NEXT!";
 }
 
-function reset()
+function reset() //reset method for clearing 
 {
 	var image = document.getElementById('myImage');
 	var image2 = document.getElementById('myImage2');
@@ -231,7 +232,7 @@ function reset()
     	x.style.color = "Black"; 
 }
 
-
+//Establishing countdown style timer
 var timeInSecs;
 var ticker;
 
@@ -260,7 +261,20 @@ document.getElementById("countdown").innerHTML = secs;
 function TimeRunsOut()
 {
 	endTimer();
-	WrongAnswer();
+	var image = document.getElementById('myImage');
+	var image2 = document.getElementById('myImage2');
+	if(CorrectAnswer==Colbert)
+		{
+			image.src = "../Images/SelectedTrumpIncorrect.png";
+		    image2.src = "../Images/SelectedColbertCorrect.png";
+		    playTXFile();
+		}
+	else
+		{
+			image.src = "../Images/SelectedTrumpCorrect.png";
+		    image2.src = "../Images/SelectedColbertIncorrect.png";
+		    playCXFile();
+		}
 	document.getElementById('whoQ').innerHTML = "Time's Up!";
 	var x = document.getElementById('whoQ');
     x.style.fontSize = "35px";           
@@ -272,6 +286,7 @@ function endTimer()
 	clearInterval(ticker); // stop counting at zero
 }
 
+//These functions deal with the voice files
 function playTCFile()
 {
 	var CorrectTrumpSound = 	[
