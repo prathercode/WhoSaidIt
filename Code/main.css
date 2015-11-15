@@ -10,16 +10,17 @@ footer
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
-	left: 0;
 	right: 0;
+	left: 0;
     height: 24px;
     background: #2D2D2D;
-    bottom: 0px;
+    bottom: 0;
     text-align: center;
     color: white;
     font-family: 'Share Tech Mono';
     font-size: 14px;
     padding-top: 8px;
+    vertical-align: middle;
 }
 #linky
 {
@@ -106,6 +107,17 @@ h1
     padding-left: 30px;
     text-align:center;
 }
+.donald
+{
+ 	display: inline-block;
+	float: left;
+ 	margin-left: auto;
+ 	padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 0px;
+    text-align:center;
+}
 .hillary_style
 {
  	display: inline-block;
@@ -123,6 +135,16 @@ h1
  	float: right;
  	padding-top: 0px;
     padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    text-align:center;
+}
+.stephen
+{
+ 	display: inline;
+ 	float: right;
+ 	padding-top: 0px;
+    padding-right: 0px;
     padding-bottom: 50px;
     padding-left: 30px;
     text-align:center;
@@ -181,7 +203,7 @@ h1
     -webkit-transform: translate(0px,5px);
     border-bottom: 1px solid;
 }
-#trumpstyle, #colbstyle, #hillaryStyle, #obamaStyle
+#trumpstyle, #colbstyle, #hillaryStyle, #obamaStyle, #dt, #sc
 {
 	display: inline-block;
 	vertical-align: middle;
@@ -265,4 +287,16 @@ h2
 	font-size: 28px;
 	font-family: 'Orbitron', sans-serif;
 	font-weight: bold;
+}
+#dt
+{
+	float: left;
+ 	margin-left: auto;
+
+}
+#sc
+{
+	float: right;
+ 	margin-right: auto;
+
 }
