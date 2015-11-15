@@ -7,8 +7,23 @@
 <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'/>
 <head>
 	<title>    Trump Or Colbert!    </title>
-	<script src="finalscript.js">
-	</script>
+	<script src="finalscript.js"></script>
+	<script>window.twttr = (function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0],
+	    t = window.twttr || {};
+	  if (d.getElementById(id)) return t;
+	  js = d.createElement(s);
+	  js.id = id;
+	  js.src = "https://platform.twitter.com/widgets.js";
+	  fjs.parentNode.insertBefore(js, fjs);
+	 
+	  t._e = [];
+	  t.ready = function(f) {
+	    t._e.push(f);
+	  };
+	 
+	  return t;
+	}(document, "script", "twitter-wjs"));</script>
 </head>
 
 <body onload = "setStartingStats()"> 
@@ -38,6 +53,8 @@
 		<h1><font color="Black">Trump or Colbert?</font></h1>
 	</center>
 	<div class="content">
+		<a class="twitter-trump" href="https://twitter.com/realDonaldTrump" data-widget-id="665841148175507456">Tweets by @realDonaldTrump</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		<div class="trump-with-img">
 		    <div id="trumpstyle">
 				<img id="myImage" onclick="SelectTrump(); endTimer()" src="../Images/TrumpDefault.png" width="270" height="202.5" alt="Donald Trump"/>
@@ -45,13 +62,14 @@
 		</div>
 		
 		<div class="colbert-with-img">
+			<a class="twitter-colbert" href="https://twitter.com/StephenAtHome" data-widget-id="665841148175507456">Tweets by @StephenAtHome</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 			<div id="colbstyle">		
 				<img id="myImage2" onclick="SelectColbert(); endTimer()" src="../Images/ColbertDefault.png" width="270" height="202.5" alt="Steven Colbert"/>
 			</div>
 		</div>	
 
 		<h2 id="whoQ" >Who Said It?</h2>
-
 		<div id="quoteSectn" align="center">
 			<p id="quote">Who said it? Late Night comedian Stephen Colbert, or GOP Presidential front-runner, Donald Trump? </p>
 		</div>

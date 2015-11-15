@@ -1,7 +1,6 @@
 from TwitterAPI import TwitterAPI 
 import pyjs
 
-
 CONSUMER_KEY = 'gCPciKkPVTFnMJyJXmKxf7dEW'
 CONSUMER_SECRET = 'JqhwQYvFEv7fbU0nN9rsqeMEKKQ2c2lfVLHC5YGwMcvFgD7Bsj'
 ACCESS_TOKEN_KEY = '4189424297-aiHvofbI8cakO6dbommGJCKMZwJbXRFVmJfdSls'
@@ -14,7 +13,7 @@ colbert = api.request('statuses/user_timeline', {'user_id': 16303106})
 trump_tweets = ''
 colbert_tweets = ''
 for item in trump:
-	trump_tweets = [for i in item['text'] if 'text' in item else item]
+	print (item['text'] if 'text' in item else item)
 
 for item in colbert:
-	colbert_tweets = [for i in item['text'] if 'text' in item else item]
+	print (item['text'] if 'text' in item else item)
