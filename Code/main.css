@@ -167,11 +167,23 @@ h2
 }
 #rGuesses, #rGVal
 {
-
+	display: inline;
+	vertical-align: middle;
+	text-align: center;
+	margin: auto;
 }
-#wGuesses, #wSVal
+#wGuesses, #wGVal
 {
-
+	display: inline;
+	vertical-align: middle;
+	text-align: center;
+	margin: auto;
+}
+#cSVal, #wGVal, #bSVal, #rGVal
+{
+	font-size: 16px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight: bold;
 }
 #timer, #countdown
 {
