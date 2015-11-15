@@ -140,18 +140,57 @@ h2
 	margin-bottom: 0px;
 	padding: 0px;	
 }
-#cStreak, #bStreak, #rGuesses, #wGuesses
+.values
 {
 	text-align: center;
+	margin-top: 25px;
+}
+#cStreak, #bStreak, #rGuesses, #wGuesses
+{
 	font-size: 16px;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-weight: bold;
 }
-#timer
+#cStreak, #cSVal
 {
+	display: inline;
+	vertical-align: middle;
 	text-align: center;
-	margin-top: 30px;
-	margin-bottom: 0px;
+	margin: auto;
+}
+#bStreak, #bSVal
+{
+	display: inline;
+	vertical-align: middle;
+	text-align: center;
+	margin: auto;
+}
+#rGuesses, #rGVal
+{
+	display: inline;
+	vertical-align: middle;
+	text-align: center;
+	margin: auto;
+}
+#wGuesses, #wGVal
+{
+	display: inline;
+	vertical-align: middle;
+	text-align: center;
+	margin: auto;
+}
+#cSVal, #wGVal, #bSVal, #rGVal
+{
+	font-size: 16px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight: bold;
+}
+#timer, #countdown
+{
+	display: inline;
+	vertical-align: middle;
+	text-align: center;
+	margin: auto;
 	font-size: 24px;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-weight: bold;

@@ -20,13 +20,13 @@
 	<div class="content">
 		<div class="trump-with-img">
 		    <div id="trumpstyle">
-				<img id="myImage" onclick="SelectTrump()" src="../Images/TrumpDefault.png" width="270" height="202.5" alt="Donald Trump"/>
+				<img id="myImage" onclick="SelectTrump(); endTimer()" src="../Images/TrumpDefault.png" width="270" height="202.5" alt="Donald Trump"/>
 			</div>
 		</div>
 		
 		<div class="colbert-with-img">
 			<div id="colbstyle">		
-				<img id="myImage2" onclick="SelectColbert()" src="../Images/ColbertDefault.png" width="270" height="202.5" alt="Steven Colbert"/>
+				<img id="myImage2" onclick="SelectColbert(), endTimer()" src="../Images/ColbertDefault.png" width="270" height="202.5" alt="Steven Colbert"/>
 			</div>
 		</div>	
 
@@ -41,13 +41,17 @@
 	<div id="bottomColor">
 		<br>
 		<div id="nextBtn" align="center">
-			<a href="#" onclick="DisplayQuote()"class="button-0">NEXT!</a>
+			<a href="#" onclick="DisplayQuote(); endTimer(); startTimer(16)"class="button-0">NEXT!</a>
 		</div>
-		<p id="timer">Timer: <div id="tVal"></p>
-		<p id="cStreak">Current Streak: <div id="cSVal"></p>
-		<p id="bStreak">Best Streak: <div id="bSVal"></p>
-		<p id="rGuesses">Right Guesses: <div id="rGVal"></p>
-		<p id="wGuesses">Wrong Guesses: <div id="wGVal"></p>
+		<div class="values">
+		<div class="timerCount">
+			<p id="timer">Timer: <div id="countdown"></div></p>
+		</div>
+			<p id="cStreak">Current Streak: <div id="cSVal"></div></p>
+			<p id="bStreak">Best Streak: <div id="bSVal"></div></p>
+			<p id="rGuesses">Right Guesses: <div id="rGVal"></div></p>
+			<p id="wGuesses">Wrong Guesses: <div id="wGVal"></div></p>
+		</div>
 	</div>
 	</div>
 </div>
