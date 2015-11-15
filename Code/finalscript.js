@@ -8,6 +8,8 @@ var RightGuessCount = 0;
 var WrongGuessCount = 0;
 var Streak = 0;
 var TopStreak = 0;
+var LastColbert;
+var LastTrump;
 
 function setStartingStats()
 {
@@ -65,6 +67,37 @@ function DisplayQuote() 				//function that displays new questions. Called by cl
 
 	ToBeDisplayed = parseInt((Math.random() * QuoteDB.length), 10);
 	document.getElementById("quote").innerHTML = QuoteDB[ToBeDisplayed];	//Displays a quote
+	if (RealAnswer == "Colbert") 
+		{
+			if (ToBeDisplayed==LastColbert)
+				{
+					if(ToBeDisplayed > (QuoteDB.length)/2)
+						{
+							ToBeDisplayed--;
+						}
+					else
+						{
+							ToBeDisplayed++;
+						}
+				}
+				LastColbert = ToBeDisplayed;
+		}		
+
+	else
+		{
+			if (ToBeDisplayed==LastTrump)
+				{
+					if(ToBeDisplayed > (QuoteDB.length)/2)
+						{
+							ToBeDisplayed--;
+						}
+					else
+						{
+							ToBeDisplayed++;
+						}
+				}
+				LastTrump = ToBeDisplayed;	
+		}	
 	document.getElementsByClassName('button-0')[0].innerHTML = "PASS!";
 }
 
