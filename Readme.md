@@ -31,7 +31,7 @@ This was our first Hackathon.
 We had a lot of help in making this project happen. 
 Thanks to CBS, Stephen Colbert, Donald Trump, and everyone at "The Late Show with Stephen Colbert" for the idea behind the project. 
 
-We also made use of Princeton's many amenities, including reimbusements, food, mentors, workshops, workspace, network, etc. 
+We also made use of Princeton's many amenities, including reimbursements, food, mentors, workshops, workspace, network, etc. 
 
 Software used included Sublime Text 2, Sublime Text 3, Google Chrome, and Adobe Illustrator. 
 
