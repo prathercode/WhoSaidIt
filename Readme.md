@@ -9,7 +9,7 @@ This website will be accessible at:
 If you wish to access it when it is not available, email arjuntalpallikar@utexas.edu
 You can also run it locally by opening index.html 
 
-The application 
+The application can be played by hitting start, and then attempting to answer questions.
 
 
 	CREATORS:
