@@ -158,8 +158,8 @@ function CorrectAnswer()	// if player choice is correct
 		{		
 				var image = document.getElementById('myImage');
 		    	var image2 = document.getElementById('myImage2');
-				image.src = "../Images/SelectedColbertCorrectTrump.jpg";
-		        image2.src = "../Images/SelectedColbertCorrect.png";
+				image.src = "SelectedColbertCorrectTrump.jpg";
+		        image2.src = "SelectedColbertCorrect.png";
 		        playCCFile();
 		}
 
@@ -167,8 +167,8 @@ function CorrectAnswer()	// if player choice is correct
 		{
 				var image = document.getElementById('myImage');
 		    	var image2 = document.getElementById('myImage2');
-				image.src = "../Images/SelectedTrumpCorrect.png";
-		        image2.src = "../Images/SelectedTrumpCorrectColbert.jpg";
+				image.src = "SelectedTrumpCorrect.png";
+		        image2.src = "SelectedTrumpCorrectColbert.jpg";
 		        playTCFile();
 		}
 
@@ -193,8 +193,8 @@ function WrongAnswer()		// if player choice is wrong
 		{
 			var image = document.getElementById('myImage');
 		    var image2 = document.getElementById('myImage2');
-			image.src = "../Images/TrumpDefault.png";
-		    image2.src = "../Images/SelectedColbertIncorrect.png";
+			image.src = "TrumpDefault.png";
+		    image2.src = "SelectedColbertIncorrect.png";
 		    playCXFile();
 		}	
 
@@ -202,8 +202,8 @@ function WrongAnswer()		// if player choice is wrong
 		{
 			var image = document.getElementById('myImage');
 		    var image2 = document.getElementById('myImage2');
-			image.src = "../Images/SelectedTrumpIncorrect.png";
-		    image2.src = "../Images/ColbertDefault.png";
+			image.src = "SelectedTrumpIncorrect.png";
+		    image2.src = "ColbertDefault.png";
 		    playTXFile();
 		}	
 	QuestionPlaying = false;
@@ -225,8 +225,8 @@ function reset() //reset method for clearing
 {
 	var image = document.getElementById('myImage');
 	var image2 = document.getElementById('myImage2');
-		image.src = "../Images/TrumpDefault.png";
-		image2.src = "../Images/ColbertDefault.png";
+		image.src = "TrumpDefault.png";
+		image2.src = "ColbertDefault.png";
 		document.getElementById('whoQ').innerHTML = 'Who Said It?';
 	var x = document.getElementById('whoQ');
    		x.style.fontSize = "24px";           
@@ -266,14 +266,14 @@ function TimeRunsOut()
 	var image2 = document.getElementById('myImage2');
 	if(RealAnswer == "Colbert")
 		{
-			image.src = "../Images/SelectedTrumpIncorrect.png";
-		    image2.src = "../Images/SelectedColbertCorrect.png";
+			image.src = "SelectedTrumpIncorrect.png";
+		    image2.src = "SelectedColbertCorrect.png";
 		    playCXFile();
 		}
 	else
 		{
-			image.src = "../Images/SelectedTrumpCorrect.png";
-		    image2.src = "../Images/SelectedColbertIncorrect.png";
+			image.src = "SelectedTrumpCorrect.png";
+		    image2.src = "SelectedColbertIncorrect.png";
 		   	playTXFile();
 		}	
 	document.getElementById('whoQ').innerHTML = "Time's Up!";
