@@ -79,12 +79,33 @@ h1
     padding-left: 30px;
     text-align:center;
 }
+.hillary_style
+{
+ 	display: inline-block;
+	float: left;
+ 	margin-left: auto;
+ 	padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    text-align:center;
+}
 .colbert-with-img
 {
  	display: inline;
  	float: right;
  	padding-top: 0px;
     padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    text-align:center;
+}
+.obama_style
+{
+ 	display: inline;
+ 	float: right;
+ 	padding-top: 0px;
+    padding-right: 60px;
     padding-bottom: 50px;
     padding-left: 30px;
     text-align:center;
@@ -126,21 +147,12 @@ h1
     text-decoration: none;
     color: #000000;
 }
-
 .button-0:active {
     transform: translate(0px,5px);
     -webkit-transform: translate(0px,5px);
     border-bottom: 1px solid;
 }
-#trump, #colbert
-{
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 28px;
-	color: white;
-	display: inline-block;
-	vertical-align: middle;
-}
-#trumpstyle, #colbstyle
+#trumpstyle, #colbstyle, #hillaryStyle, #obamaStyle
 {
 	display: inline-block;
 	vertical-align: middle;
