@@ -4,7 +4,8 @@ window.RealAnswer;						//global variable that stores the correct answer for the
 window.SelectedAnswer;					//global variable that stores the player's answer
 window.HappyMessage = "Good Job!"		//global variable containing response if player is correct
 window.SadMessage	= "You're Fired!"	//global variable containing response if player is wrong
-var Score = 0;
+var RightGuessCount = 0;
+var WrongGuessCount = 0;
 var Streak = 0;
 var TopStreak = 0;
 
@@ -111,14 +112,16 @@ function CorrectAnswer()	//Color functionality if player is correct
 		        image2.src = "../Images/SelectedTrumpCorrectColbert.jpg";
 		}
 	document.getElementById('whoQ').innerHTML = HappyMessage;
-	Score++;
+	RightGuessCount++;
 	Streak++;
 	if(Streak>TopStreak)
 	{
 		TopStreak = Streak;
 	}
-	alert("Score: "+Score.toString()+", Current Streak: "+Streak.toString()+", Hottest Streak: "+TopStreak.toString());
-
+	document.getElementById("rGVal").innerHTML = RightGuessCount;
+	document.getElementById("wGVal").innerHTML = WrongGuessCount;
+	document.getElementById("cSVal").innerHTML = Streak;
+	document.getElementById("bSVal").innerHTML = TopStreak;
 }
 
 function WrongAnswer()		// Color functionality if player is wrong
@@ -139,13 +142,16 @@ function WrongAnswer()		// Color functionality if player is wrong
 		    image2.src = "../Images/ColbertDefault.png";
 		}	
 	document.getElementById('whoQ').innerHTML = SadMessage;
-	Score--;
+	WrongGuessCount++;
 	if(Streak>TopStreak)
 	{
 		TopStreak = Streak;
 	}
 	Streak = 0;
-	alert("Score: "+Score.toString()+", Current Streak: "+Streak.toString()+", Hottest Streak: "+TopStreak.toString());
+	document.getElementById("rGVal").innerHTML = RightGuessCount;
+	document.getElementById("wGVal").innerHTML = WrongGuessCount;
+	document.getElementById("cSVal").innerHTML = Streak;
+	document.getElementById("bSVal").innerHTML = TopStreak;
 }
 
 function reset()
@@ -157,11 +163,7 @@ function reset()
 	document.getElementById('whoQ').innerHTML = 'WHO SAID IT?';
 }
 
-//Score
 
-//Current Streak
-
-//Best Streak
 var timeInSecs;
 var ticker;
 
