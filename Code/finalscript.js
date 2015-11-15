@@ -8,6 +8,8 @@ var RightGuessCount = 0;
 var WrongGuessCount = 0;
 var Streak = 0;
 var TopStreak = 0;
+var LastColbert;
+var LastTrump;
 
 function setStartingStats()
 {
@@ -64,6 +66,37 @@ function DisplayQuote() 				//function that displays new questions. Called by cl
 		}
 
 	ToBeDisplayed = parseInt((Math.random() * QuoteDB.length), 10);
+	if (RealAnswer == "Colbert") 
+		{
+			if (ToBeDisplayed==LastColbert)
+				{
+					if(ToBeDisplayed > (QuoteDB.length)/2)
+						{
+							ToBeDisplayed--;
+						}
+					else
+						{
+							ToBeDisplayed++;
+						}
+				}
+				LastColbert = ToBeDisplayed;
+		}		
+
+	else
+		{
+			if (ToBeDisplayed==LastTrump)
+				{
+					if(ToBeDisplayed > (QuoteDB.length)/2)
+						{
+							ToBeDisplayed--;
+						}
+					else
+						{
+							ToBeDisplayed++;
+						}
+				}
+				LastTrump = ToBeDisplayed;	
+		}	
 	document.getElementById("quote").innerHTML = QuoteDB[ToBeDisplayed];	//Displays a quote
 	document.getElementsByClassName('button-0')[0].innerHTML = "PASS!";
 }
@@ -158,6 +191,7 @@ function WrongAnswer()		// Color functionality if player is wrong
 		    var image2 = document.getElementById('myImage2');
 			image.src = "../Images/TrumpDefault.png";
 		    image2.src = "../Images/SelectedColbertIncorrect.png";
+
 		}	
 
 	else
@@ -234,3 +268,4 @@ function endTimer()
 {
 	clearInterval(ticker); // stop counting at zero
 }
+

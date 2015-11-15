@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'/>
+<link href='https://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'/>
+<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'/>
+<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'/>
 <head>
 	<title>    Trump vs Colbert    </title>
 	<script src="finalscript.js">
@@ -8,12 +12,22 @@
 </head>
 
 <body onload = "setStartingStats()">
+				
+				<audio id="trumpBrilliant"><source src="../Audio/Final Audio Files/TrumpBrilliant.mp3" type="audio/mp3"></audio>
+				<audio id="trumpCongrats"><source src="../Audio/Final Audio Files/TrumpCongratulations.wav" type="audio/wav"></audio>
+				<audio id="trumpEK"><source src="../Audio/Final Audio Files/TrumpEveryoneKnows.wav" type="audio/wav"></audio>
+				<audio id="trumpFantastic"><source src="../Audio/Final Audio Files/TrumpFantastic.wav" type="audio/wav"></audio>
+				<audio id="trumpFired1"><source src="../Audio/Final Audio Files/TrumpFired1.wav" type="audio/wav"></audio>
+				<audio id="trumpFired2"><source src="../Audio/Final Audio Files/TrumpFired2.wav" type="audio/wav"></audio>
+				<audio id="trumpFired3"><source src="../Audio/Final Audio Files/TrumpFired3.wav" type="audio/wav"></audio>
+				<audio id="trumpIDTS"><source src="../Audio/Final Audio Files/TrumpIDTS.wav" type="audio/wav"></audio>
+
 <div class="backgroundShapes">
 	<div id="topColor">
 
 
 	<center>
-		<h1><font color="Black">TRUMP OR COLBERT?</font></h1>
+		<h1><font color="Black">Trump or Colbert?</font></h1>
 	<!--	<img id="line" src"../Images/BroadenedLine.png" width= "900" height="20"/>-->
 	</center>
 	<div class="content">
@@ -40,7 +54,7 @@
 		<div id="bottomColor">
 			<br>
 			<div id="nextBtn" align="center">
-				<a href="#" onclick="ButtonMethod(); endTimer(); startTimer(16)"class="button-0">START!</a>
+				<a href="#" onclick="ButtonMethod(); endTimer(); startTimer(16); playFile()"class="button-0">START!</a>
 			</div>
 
 			<div class="hillary_style">
@@ -51,14 +65,14 @@
 			
 			<div class="obama_style">
 			<div id="obamaStyle">
-				<img id="obamaTrump" src="../Images/TrumpPoster.png" width="216" height="291" alt="TrumpPoster"/>
+				<img id="obamaTrump" src="../Images/TrumpStamp.png" width="237" height="291" alt="TrumpPoster"/>
 			</div>
 			</div>
 
 			<div class="values">
 				<div id="timerValues">
-					<p id="timer">Timer: <div id="countdown"></div></p>
-				</div>
+					<p id="timer">TIMER: <div id="countdown"></div></p>
+				</div> 
 
 				<div id="bottomValues">
 					<p id="cStreak">Current Streak: <div id="cSVal"></div></p>

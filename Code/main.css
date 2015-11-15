@@ -3,13 +3,19 @@ body
 	background-color: #2D2D2D; /*A7A9AC*/
 	max-width: 100%;
 	max-height: 100%;
+	background-image: url("../Images/CorkBoard.jpg");
 }
 h1
 {
 	font-size: 60px;
 	color : #0000FF;
 	text-align: center;
-	font-family: Impact, Charcoal, sans-serif;
+	font-family: 'Permanent Marker', cursive;
+	background-color: #ffde6a;
+    border: 2px solid black;
+    padding: 5px;
+    width: 60%;
+    box-shadow: 5px 5px 5px #000101;
 }
 #whoQ
 {
@@ -109,6 +115,7 @@ h1
     padding-bottom: 50px;
     padding-left: 30px;
     text-align:center;
+
 }
 #quoteSectn
 {
@@ -121,8 +128,9 @@ h1
 	width: 30%;
 	margin: auto;
 	margin-top: 0px;
-	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-family: 'Coming Soon', cursive;
 	font-size: 16px;
+	font-weight: bold;
 	box-shadow: 5px 5px 5px #000101;
 }
 .button-0
@@ -138,7 +146,7 @@ h1
     text-shadow: 0px -2px #ffde6a;
 	transition: all 0.1s;
 	-webkit-transition: all 0.1s;
-	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-family: 'Permanent Marker', cursive;
 	font-size: 40px;
 	box-shadow: 5px 5px 5px #000101;
 }
@@ -161,7 +169,7 @@ h2
 {
 	color : 000000;
 	text-align: center;
-	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-family: 'Permanent Marker', cursive;
 	margin-top: -10px;
 	margin-bottom: 0px;
 	padding: 0px;	
@@ -200,8 +208,8 @@ h2
 }
 #cStreak, #bStreak, #rGuesses, #wGuesses
 {
-	font-size: 20px;
-	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 22px;
+	font-family: 'Indie Flower', cursive;
 	font-weight: bold;
 	vertical-align: middle;
 }
@@ -214,15 +222,15 @@ h2
 }
 #cSVal, #bSVal
 {
-	font-size: 20px;
-	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 22px;
+	font-family: 'Indie Flower', cursive;
 	font-weight: bold;
 	vertical-align: middle;
 }
 #rGVal, #wGVal
 {
-	font-size: 20px;
-	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 22px;
+	font-family: 'Indie Flower', cursive;
 	font-weight: bold;
 	vertical-align: middle;
 }
@@ -233,6 +241,6 @@ h2
 	text-align: center;
 	margin: auto;
 	font-size: 28px;
-	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-family: 'Orbitron', sans-serif;
 	font-weight: bold;
 }

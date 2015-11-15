@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="TrumpFiringAudacity_data" version="1.3.0" audacityversion="2.1.1" sel0="0.0000000000" sel1="0.5648979592" vpos="400" h="0.0000000000" zoom="327.2836538462" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="major_brand" value="dash"/>
+		<tag name="Software" value="Lavf56.25.101"/>
+		<tag name="minor_version" value="0"/>
+		<tag name="compatible_brands" value="iso6mp41"/>
+	</tags>
+	<wavetrack name="Donald Trump Firing Apprentice 1" channel="0" linked="1" mute="0" solo="0" height="175" minimized="0" isSelected="0" rate="44100" gain="2.238721" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="30183">
+				<waveblock start="0">
+					<simpleblockfile filename="e00008d8.au" len="30183" min="-0.315919" max="0.294002" rms="0.045032"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Donald Trump Firing Apprentice 1" channel="1" linked="0" mute="0" solo="0" height="125" minimized="0" isSelected="0" rate="44100" gain="2.238721" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="30183">
+				<waveblock start="0">
+					<simpleblockfile filename="e00009ca.au" len="30183" min="-0.315919" max="0.294002" rms="0.045032"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Donald Trump Firing Apprentice 2" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="24912">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000670.au" len="24912" min="-0.48734" max="0.538289" rms="0.078688"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Donald Trump Firing Apprentice 2" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="24912">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000377.au" len="24912" min="-0.489531" max="0.447873" rms="0.079464"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Donald Trump Firing Apprentice 5" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="24912">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000f30.au" len="24912" min="-0.558048" max="0.534836" rms="0.082851"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Donald Trump Firing Apprentice 5" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="24912">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000361.au" len="24912" min="-0.498988" max="0.498479" rms="0.088208"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
